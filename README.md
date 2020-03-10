@@ -1,5 +1,7 @@
 # awesome-directed-fuzzing
 
+Directed Fuzzing seems to be a current hot research topic. This repository aims to provide a curated list of research papers on directed whitebox/greybox fuzzing.
+
 ## Directed Whitebox Fuzzing
 #### [ICSE'09] Taint-based Directed Whitebox Fuzzing [[paper]](https://people.csail.mit.edu/rinard/paper/icse09.pdf)
 
