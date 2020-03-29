@@ -46,7 +46,7 @@ Directed Fuzzing seems to be a current hot research topic. This repository aims 
 
 #### [SEC'20] FuzzGuard: Filtering out Unreachable Inputs in Directed Grey-box Fuzzing through Deep Learning [[paper]](http://kaichen.org/paper/conference/sec20summer-final343.pdf) [[project]](https://github.com/zongpy/FuzzGuard)
 
-#### [SEC'20] ParmeSan: Sanitizer-guided Greybox Fuzzing [[paper]](https://download.vusec.net/papers/parmesan_sec20.pdf) [[project]](https://github.com/vusec/parmesan)
+#### [SEC'20] ParmeSan: Sanitizer-guided Greybox Fuzzing [[paper]](https://download.vusec.net/papers/parmesan_sec20.pdf) [[project]](https://github.com/vusec/parmesan) [[my slides]](./ParmeSan.pdf)
 
 #### [arxiv'20] Binary-level Directed Fuzzing for Use-After-Free Vulnerabilities [[paper]](https://arxiv.org/pdf/2002.10751.pdf)
 
