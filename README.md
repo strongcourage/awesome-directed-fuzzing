@@ -40,7 +40,7 @@ Directed Fuzzing seems to be a current hot research topic. This repository aims 
 
 #### [arxiv'19] V-Fuzz: Vulnerability-Oriented Evolutionary Fuzzing [[paper]](https://arxiv.org/pdf/1901.01142.pdf)
 
-#### [SANER'20] Sequence directed hybrid fuzzing
+#### [SANER'20] Sequence directed hybrid fuzzing [[paper]](./sequence_hybrid.pdf)
 
 #### [ICSE'20] Targeted Greybox Fuzzing with Static Lookahead Analysis [[paper]](https://mariachris.github.io/Pubs/ICSE-2020.pdf)
 
