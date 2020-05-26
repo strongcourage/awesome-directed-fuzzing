@@ -56,6 +56,8 @@ Directed Fuzzing seems to be a current hot research topic. This repository aims 
 - *Input-structure aware*: TOFU leverages knowledge of the program’s input structure in the form of a protobuf
 specification.
 
+#### [arxiv'20] SoK: The Progress, Challenges, and Perspectives of Directed Greybox Fuzzing [[paper]](https://arxiv.org/pdf/2005.11907.pdf)
+
 ## Others
 #### [ISSTA'11] Statically-Directed Dynamic Automated Test Generation [[paper]](http://bitblaze.cs.berkeley.edu/papers/testgen-issta11.pdf)
 
