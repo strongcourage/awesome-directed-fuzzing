@@ -1,29 +1,6 @@
 # awesome-directed-fuzzing
 
-Directed Fuzzing seems to be a current hot research topic. This repository aims to provide a curated list of research papers on directed whitebox/greybox fuzzing.
-
-## Directed Whitebox Fuzzing
-#### [ICSE'09] Taint-based Directed Whitebox Fuzzing [[paper]](https://people.csail.mit.edu/rinard/paper/icse09.pdf)
-
-#### [S&P'10] TaintScope: A Checksum-Aware Directed Fuzzing Tool for Automatic Software Vulnerability Detection [[paper]](http://faculty.cs.tamu.edu/guofei/paper/TaintScope-Oakland10.pdf)
-
-#### [SAS'11] Directed symbolic execution [[paper]](http://www.cs.tufts.edu/~jfoster/papers/sas11.pdf)
-
-#### [ICSE'12] BugRedux: Reproducing Field Failures for In-house Debugging [[paper]]()
-
-#### [Thesis'12] Hybrid Fuzz Testing: Discovering Software Bugs via Fuzzing and Symbolic Execution [[paper]](http://reports-archive.adm.cs.cmu.edu/anon/2012/CMU-CS-12-116.pdf)
-
-#### [FSE'13] KATCH: High-Coverage Testing of Software Patches [[paper]](https://srg.doc.ic.ac.uk/files/papers/katch-fse-13.pdf)
-
-#### [TOSEM'14] Directed Incremental Symbolic Execution [[paper]](https://userweb.cs.txstate.edu/~g_y10/publications/YangETAL14DiSE.pdf)
-
-#### [ICSE'15] Hercules: Reproducing Crashes in Real-World Application Binaries [[paper]](https://thuanpv.github.io/publications/hercules.pdf)
-
-#### [ICSE'16] Guiding Dynamic Symbolic Execution toward Unverified Program Executions [[paper]](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/07/icse-2016.pdf)
-
-#### [TASE'16] SeededFuzz: Selecting and Generating Seeds for Directed Fuzzing [[paper]](https://www.computer.org/csdl/proceedings-article/tase/2016/1764a049/12OmNAo45Pw)
-
-#### [SAC'18] Improving Function Coverage with Munch: A Hybrid Fuzzing and Directed Symbolic Execution Approach [[paper]](https://arxiv.org/pdf/1711.09362.pdf) [[project]]()
+Directed Fuzzing seems to be a current hot research topic. This repository aims to provide a curated list of research papers focusing on directed greybox fuzzing (see more [directed whitebox fuzzing](./whitebox.md) and [miscellaneous](./misc.md).
 
 ## Directed Greybox Fuzzing
 #### [CCS'17] Directed Greybox Fuzzing [[paper]](https://mboehme.github.io/paper/CCS17.pdf) [[project]](https://github.com/aflgo) [[slides]](https://www.slideshare.net/mboehme/aflgo-directed-greybox-fuzzing) [[talk]](https://www.youtube.com/watch?v=jiECNix0HuQ)
@@ -57,12 +34,3 @@ Directed Fuzzing seems to be a current hot research topic. This repository aims 
 specification.
 
 #### [arxiv'20] SoK: The Progress, Challenges, and Perspectives of Directed Greybox Fuzzing [[paper]](https://arxiv.org/pdf/2005.11907.pdf)
-
-## Others
-#### [ISSTA'11] Statically-Directed Dynamic Automated Test Generation [[paper]](http://bitblaze.cs.berkeley.edu/papers/testgen-issta11.pdf)
-
-#### [SEC'13] Dowsing for overflows: A guided fuzzer to find buffer boundary violations [[paper]](https://www.cs.vu.nl/~herbertb/papers/dowser_usenixsec13.pdf)
-
-#### [ASPLOS'15] Targeted Automatic Integer Overflow Discovery Using Goal-Directed Conditional Branch Enforcement [[paper]](https://people.csail.mit.edu/fanl/papers/diode-asplos2015.pdf)
-
-#### [PLDI'19] Parser-Directed Fuzzing [[paper]](https://rahul.gopinath.org/resources/pldi2019/mathis2019parser.pdf) [[project]](https://drive.google.com/drive/folders/1OAgT9DPe_Nr2NI32KypK1sqmM0u1EYlQ) [[video]](https://www.youtube.com/watch?v=ypwppYHSz6A)
