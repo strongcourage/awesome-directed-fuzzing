@@ -25,7 +25,7 @@ Directed Fuzzing seems to be a current hot research topic. This repository aims 
 
 #### [SEC'20] ParmeSan: Sanitizer-guided Greybox Fuzzing [[paper]](https://download.vusec.net/papers/parmesan_sec20.pdf) [[project]](https://github.com/vusec/parmesan) [[my slides]](./ParmeSan.pdf)
 
-#### [RAID'20] Binary-level Directed Fuzzing for Use-After-Free Vulnerabilities [[paper]](https://arxiv.org/pdf/2002.10751.pdf)
+#### [RAID'20] Binary-level Directed Fuzzing for Use-After-Free Vulnerabilities [[paper]](https://arxiv.org/pdf/2002.10751.pdf) [[project]](https://github.com/strongcourage/uafuzz)
 
 #### [arxiv'20] TOFU: Target-Oriented FUzzer [[paper]](https://arxiv.org/pdf/2004.14375.pdf)
 - *Command-line flags*: TOFU augments the input space that it explores to include command-line flags, so that users do not have to select such flags manually.
