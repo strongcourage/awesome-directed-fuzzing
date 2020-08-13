@@ -19,11 +19,11 @@ Directed Fuzzing seems to be a current hot research topic. This repository aims 
 
 #### [SANER'20] Sequence directed hybrid fuzzing [[paper]](./sequence_hybrid.pdf)
 
-#### [ICSE'20] Targeted Greybox Fuzzing with Static Lookahead Analysis [[paper]](https://mariachris.github.io/Pubs/ICSE-2020.pdf)
+#### [ICSE'20] Targeted Greybox Fuzzing with Static Lookahead Analysis [[paper]](https://mariachris.github.io/Pubs/ICSE-2020.pdf) [[talk]](https://www.youtube.com/watch?v=86vvChVr9bQ)
 
-#### [SEC'20] FuzzGuard: Filtering out Unreachable Inputs in Directed Grey-box Fuzzing through Deep Learning [[paper]](http://kaichen.org/paper/conference/sec20summer-final343.pdf) [[project]](https://github.com/zongpy/FuzzGuard)
+#### [SEC'20] FuzzGuard: Filtering out Unreachable Inputs in Directed Grey-box Fuzzing through Deep Learning [[paper]](http://kaichen.org/paper/conference/sec20summer-final343.pdf) [[project]](https://github.com/zongpy/FuzzGuard) [[slides]](https://www.usenix.org/system/files/sec20_slides_zong.pdf) [[talk]](https://www.usenix.org/conference/usenixsecurity20/presentation/zong)
 
-#### [SEC'20] ParmeSan: Sanitizer-guided Greybox Fuzzing [[paper]](https://download.vusec.net/papers/parmesan_sec20.pdf) [[project]](https://github.com/vusec/parmesan) [[my slides]](./ParmeSan.pdf)
+#### [SEC'20] ParmeSan: Sanitizer-guided Greybox Fuzzing [[paper]](https://download.vusec.net/papers/parmesan_sec20.pdf) [[project]](https://github.com/vusec/parmesan) [[slides]](https://www.usenix.org/system/files/sec20_slides_osterlund.pdf) [[talk]](https://www.usenix.org/conference/usenixsecurity20/presentation/osterlund)
 
 #### [RAID'20] Binary-level Directed Fuzzing for Use-After-Free Vulnerabilities [[paper]](https://arxiv.org/pdf/2002.10751.pdf) [[project]](https://github.com/strongcourage/uafuzz)
 
