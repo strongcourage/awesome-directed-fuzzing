@@ -28,9 +28,7 @@ Directed Fuzzing seems to be a current hot research topic. This repository aims 
 #### [RAID'20] Binary-level Directed Fuzzing for Use-After-Free Vulnerabilities [[paper]](https://arxiv.org/pdf/2002.10751.pdf) [[project]](https://github.com/strongcourage/uafuzz)
 
 #### [arxiv'20] TOFU: Target-Oriented FUzzer [[paper]](https://arxiv.org/pdf/2004.14375.pdf)
-- *Command-line flags*: TOFU augments the input space that it explores to include command-line flags, so that users do not have to select such flags manually.
-- *Distance metric*: the number of correct branching decisions needed to reach the target, and does not use a complicated relationship to the history of the annealing that has taken place (e.g., min-max normalized values)
-- *Input-structure aware*: TOFU leverages knowledge of the program’s input structure in the form of a protobuf
-specification.
 
 #### [arxiv'20] SoK: The Progress, Challenges, and Perspectives of Directed Greybox Fuzzing [[paper]](https://arxiv.org/pdf/2005.11907.pdf)
+
+#### [PRDC'20] GTFuzz: Guard Token Directed Grey-Box Fuzzing [[paper]](https://ieeexplore.ieee.org/document/9320425)
