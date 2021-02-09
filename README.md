@@ -32,3 +32,5 @@ Directed Fuzzing seems to be a current hot research topic. This repository aims 
 #### [arxiv'20] SoK: The Progress, Challenges, and Perspectives of Directed Greybox Fuzzing [[paper]](https://arxiv.org/pdf/2005.11907.pdf)
 
 #### [PRDC'20] GTFuzz: Guard Token Directed Grey-Box Fuzzing [[paper]](https://ieeexplore.ieee.org/document/9320425)
+
+#### [Appl.Sci.'21] Constructing More Complete Control Flow Graphs Utilizing Directed Gray-Box Fuzzing [[paper]](http://scholar.google.com/scholar_url?url=https://www.mdpi.com/2076-3417/11/3/1351/pdf&hl=en&sa=X&d=711092365885842228&ei=xtEhYLeDEomImQGchIPoBg&scisig=AAGBfm0RiHu5HK9O-eFeXC2IQVAB_j7uuQ&nossl=1&oi=scholaralrt&hist=PwFTpwMAAAAJ:9999838452572663757:AAGBfm1XQkPGAWqsnVNmnoCjOFuDv3QJWQ&html=)
