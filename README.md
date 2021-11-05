@@ -206,7 +206,7 @@ Directed fuzzing, as an efficient method to focus on a specific set of targets i
 
 ### [Usenix'21] Constraint-guided Directed Greybox Fuzzing
 
-[[paper]](https://www.usenix.org/system/files/sec21fall-lee-gwangmu.pdf) [[slides]](https://www.usenix.org/system/files/sec21_slides_lee-gwangmu.pdf) 
+[[paper]](https://www.usenix.org/system/files/sec21fall-lee-gwangmu.pdf) [[slides]](https://www.usenix.org/system/files/sec21_slides_lee-gwangmu.pdf) [[talk]](https://www.youtube.com/watch?v=v3PUtjGC2_g)
 
 <details>
   <summary>Click to see the abstract!</summary>
