@@ -175,9 +175,9 @@ technique that applies static analysis and dynamic analysis to construct more co
 our technique in a prototype and evaluated it through comparing with the existing approaches on eight benchmarks. The results show that our prototype can resolve more indirect jump relations and construct more complete CFGs than existing approaches.
 </details>
 
-### [DAC'21] Regression Greybox Fuzzing
+### [DAC'21] DirectFuzz: Automated Test Generation for RTL Designs using Directed Graybox Fuzzing
 
-[[paper]](https://mboehme.github.io/paper/CCS21.pdf)
+[[paper]](https://ieeexplore.ieee.org/document/9586289)
 
 <details>
   <summary>Click to see the abstract!</summary>
