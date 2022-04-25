@@ -269,6 +269,8 @@ Unlike coverage-based fuzzing that gives equal attention to every part of a code
 --------------------------------------------------------------------------------------------------------------------------
 ### [ICSE'22] WindRanger: A Directed Greybox Fuzzer driven by Deviation Basic Block
 
+[[paper]](https://drive.google.com/file/d/1VTlFoOE5uUzL7_b5OwGWCEcMDlNC_SBF/view) [[project]](https://sites.google.com/view/windranger-directed-fuzzing/home?authuser=0) [[talk]](https://www.youtube.com/watch?v=MUmaI4evzc4)
+  
 <details>
   <summary>Click to see the abstract!</summary>
 Directed grey-box fuzzing (DGF) is a security testing technique that aims to steer the fuzzer towards predefined target sites in the program. To gain directness, DGF prioritizes the seeds whose execution traces are closer to the target sites. Therefore, evaluating the distance between the execution trace of a seed and the target sites (aka, the seed distance) is important for DGF. The first directed grey-box fuzzer, AFLGo, uses an approach of calculating the basic block level distances during static analysis and accumulating the distances of the executed basic blocks to compute the seed distance. Following AFLGo, most of the existing state-of-the-art DGF techniques use all the basic blocks on the execution trace and only the control flow information for seed distance calculation. However, not every basic block is equally important and there are certain basic blocks where the execution trace starts to deviate from the target sites (aka, deviation basic blocks).
