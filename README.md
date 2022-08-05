@@ -334,3 +334,26 @@ Computer systems are deeply integrated into our daily routines such as online sh
 In this paper we propose, design and evaluate a systematic directed fuzzing framework to automatically discover implementation bugs in arbitrary Bluetooth Classic (BT) devices. The core of our fuzzer is the first over-the-air approach that takes full control of the BT controller baseband from the host. This enables us to intercept and modify arbitrary packets, as well as to inject packets out-of-order in lower layers of closed-source BT stack, i.e., Link Manager Protocol (LMP) and Baseband. To systematically guide our fuzzing process, we propose an extensible and novel rule-based approach to automatically construct the protocol state machine during normal over-the-air communication. In particular, by writing a simple set of rules to identify protocol messages, we can dynamically construct an abstracted protocol state machine, fuzz packets resulting from a state and validate responses from target devices. As of today, we have fuzzed 13 BT devices from 11 vendors and we have discovered a total of 18 unknown implementation flaws, with 24 common vulnerability exposures (CVEs) assigned. Furthermore, our discoveries were awarded with six bug bounties from certain vendors. Finally, to show
 the broader applicability of our framework beyond BT, we have extended our approach to fuzz other wireless protocols, which additionally revealed 6 unknown bugs in certain Wi-Fi and BLE Host stacks.
 </details>
+  
+--------------------------------------------------------------------------------------------------------------------------
+### [arxiv'22] Multiple Targets Directed Greybox Fuzzing
+  
+[[paper]](https://arxiv.org/pdf/2206.14977.pdf) [[project]](https://github.com/HongliangLiang/leofuzz)
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Directed greybox fuzzing (DGF) can quickly discover or reproduce bugs in programs by seeking to reach a program location or explore some locations in order. However, due to their static stage division and coarse-grained energy scheduling, prior DGF tools perform poorly when facing multiple target locations (targets for short). In this paper, we present multiple targets directed greybox fuzzing which aims to reach multiple programs locations in a fuzzing campaign. Specifically, we propose a novel strategy to adaptively coordinate exploration and exploitation stages, and a novel energy scheduling strategy by considering more relations between seeds and target locations. We implement our approaches in a tool called LeoFuzz and evaluate it on crash reproduction, true positives verification, and vulnerability exposure in real-world programs. Experimental results show that LeoFuzz outperforms six state-of-the-art fuzzers, i.e., QYSM, AFLGo, Lolly, Berry, Beacon and WindRanger in terms of effectiveness and efficiency. Moreover, LeoFuzz has detected 23 new vulnerabilities in real-world programs, and 11 of them have been assigned CVE IDs.
+</details>
+
+--------------------------------------------------------------------------------------------------------------------------
+### [arxiv'22] FishFuzz: Throwing Larger Nets to Catch Deeper Bugs
+  
+[[paper]](https://arxiv.org/pdf/2207.13393.pdf) [[project]](https://zenodo.org/record/6405418#.YuzNvexBz_o)
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Greybox fuzzing is the de-facto standard to discover bugs during development. Fuzzers execute many inputs to maximize the amount of reached code. Recently, Directed Greybox Fuzzers (DGFs) propose an alternative strategy that goes beyond “just” coverage: driving testing toward specific code targets by selecting “closer” seeds. DGFs go through different phases: exploration (i.e., reaching interesting locations) and exploitation (i.e., triggering bugs). In practice, DGFs leverage coverage to directly measure exploration, while exploitation is, at best, measured indirectly by alternating between different targets. Specifically, we observe two limitations in existing DGFs: (i) they lack precision in their distance metric, i.e., averaging multiple
+paths and targets into a single score (to decide which seeds to prioritize), and (ii) they assign energy to seeds in a round-robin fashion without adjusting the priority of the targets (exhaustively explored targets should be dropped).
+  
+We propose FishFuzz, which draws inspiration from trawl fishing: first casting a wide net, scraping for high coverage, then slowly pulling it in to maximize the harvest. The core of our fuzzer is a novel seed selection strategy that builds on two concepts: (i) a novel multi-distance metric whose precision is independent of the number of targets, and (ii) a dynamic target ranking to automatically discard exhausted targets. This strategy allows FishFuzz to seamlessly scale to tens of thousands of targets and dynamically alternate between exploration and exploitation phases. We evaluate FishFuzz by leveraging all sanitizer labels as targets. Extensively comparing FishFuzz against modern DGFs and coverage-guided fuzzers shows that FishFuzz reached higher coverage compared to the direct competitors, reproduces existing bugs (70.2% faster), and finally discovers 25 new bugs (18 CVEs) in 44 programs.
+</details>
