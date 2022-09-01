@@ -357,3 +357,15 @@ paths and targets into a single score (to decide which seeds to prioritize), and
   
 We propose FishFuzz, which draws inspiration from trawl fishing: first casting a wide net, scraping for high coverage, then slowly pulling it in to maximize the harvest. The core of our fuzzer is a novel seed selection strategy that builds on two concepts: (i) a novel multi-distance metric whose precision is independent of the number of targets, and (ii) a dynamic target ranking to automatically discard exhausted targets. This strategy allows FishFuzz to seamlessly scale to tens of thousands of targets and dynamically alternate between exploration and exploitation phases. We evaluate FishFuzz by leveraging all sanitizer labels as targets. Extensively comparing FishFuzz against modern DGFs and coverage-guided fuzzers shows that FishFuzz reached higher coverage compared to the direct competitors, reproduces existing bugs (70.2% faster), and finally discovers 25 new bugs (18 CVEs) in 44 programs.
 </details>
+
+--------------------------------------------------------------------------------------------------------------------------
+### [CCS'22] MC2: Rigorous and Efficient Directed Greybox Fuzzing
+  
+[[paper]](https://arxiv.org/pdf/2208.14530.pdf) [[project]](https://hub.docker.com/r/abhishekshah212/mc2)
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Directed greybox fuzzing is a popular technique for targeted software testing that seeks to find inputs that reach a set of target sites in a program. Most existing directed greybox fuzzers do not provide any theoretical analysis of their performance or optimality. In this paper, we introduce a complexity-theoretic framework to pose directed greybox fuzzing as a oracle-guided search problem where some feedback about the input space (e.g., how close an input is to the target sites) is received by querying an oracle. Our framework assumes that each oracle query can return arbitrary content with a large but constant amount of information. Therefore, we use the number of oracle queries required by a fuzzing algorithm to find a target-reaching input as the performance metric. Using our framework, we design a randomized directed greybox fuzzing algorithm that makes a logarithmic (wrt. the number of all possible inputs) number of queries in expectation to find a target-reaching input. We further prove that the number of oracle queries required
+by our algorithm is optimal, i.e., no fuzzing algorithm can improve (i.e., minimize) the query count by more than a constant factor. We implement our approach in MC2 and outperform state-of-theart directed greybox fuzzers on challenging benchmarks (Magma and Fuzzer Test Suite) by up to two orders of magnitude (i.e., 134×) on average. MC2 also found 15 previously undiscovered bugs that other state-of-the-art directed greybox fuzzers failed to find.
+</details>
+
