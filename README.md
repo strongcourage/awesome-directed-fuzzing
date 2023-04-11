@@ -414,3 +414,16 @@ Dynamic data flow analysis has been widely used to guide greybox fuzzing. Howeve
 
 We designed and implemented a prototype of the CONFF fuzzer and evaluated it with the LAVA-1 dataset and some real-world vulnerabilities. The results show that the CONFF fuzzer can reproduce crashes on the LAVA-1 dataset and most of the real-world vulnerabilities. For most vulnerabilities, the CONFF fuzzer reproduced the crashes with significantly reduced time compared to state-of-the-art fuzzers. On average, the CONFF fuzzer was 23.7x faster than the state-of-the-art code coverage-based fuzzer Angora and 27.3x faster than the classical directed greybox fuzzer AFLGo.
 </details>
+
+
+--------------------------------------------------------------------------------------------------------------------------
+### [S&P'23] ODDFUZZ: Discovering Java Deserialization Vulnerabilities via Structure-Aware Directed Greybox Fuzzing
+
+[[paper]](https://arxiv.org/pdf/2304.04233.pdf) [[project]](https://github.com/ODDFuzz/ODDFuzz)
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Java deserialization vulnerability is a severe threat in practice. Researchers have proposed static analysis solutions to locate candidate vulnerabilities and fuzzing solutions to generate proof-of-concept (PoC) serialized objects to trigger them. However, existing solutions have limited effectiveness and efficiency. In this paper, we propose a novel hybrid solution ODDFUZZ to efficiently discover Java deserialization vulnerabilities. First, ODDFUZZ performs lightweight static taint analysis to identify candidate gadget chains that may cause deserialization vulnerabilities. In this step, ODDFUZZ tries to locate all candidates and avoid false negatives. Then, ODDFUZZ performs directed greybox fuzzing (DGF) to explore those candidates and generate PoC testcases to mitigate false positives. Specifically, ODDFUZZ applies a structure-aware seed generation method to guarantee the validity of the testcases, and adopts a novel hybrid feedback and a step-forward strategy to guide the directed fuzzing.
+
+We implemented a prototype of ODDFUZZ and evaluated it on the popular Java deserialization repository ysoserial. Results show that, ODDFUZZ could discover 16 out of 34 known gadget chains, while two state-of-the-art baselines only identify three of them. In addition, we evaluated ODDFUZZ on real-world applications including Oracle WebLogic Server, Apache Dubbo, Sonatype Nexus, and protostuff, and found six previously unreported exploitable gadget chains with five CVEs assigned.
+</details>
