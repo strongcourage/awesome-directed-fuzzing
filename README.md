@@ -448,3 +448,13 @@ Recent research has developed a series of methods for finding vulnerabilities in
   
 In this paper, we address this problem and develop a method for analyzing and comparing explanations for learning-based vulnerability discovery. Given a predicted vulnerability, our approach uses directed fuzzing to create local ground-truth around code regions marked as relevant by an explanation method. This local ground-truth enables us to assess the veracity of the explanation. As a result, we can qualitatively compare different explanation methods and determine the most accurate one for a particular learning setup. In an empirical evaluation with different discovery and explanation methods, we demonstrate the utility of this approach and its capabilities in making learning-based vulnerability discovery more transparent.
 </details>
+  
+--------------------------------------------------------------------------------------------------------------------------
+### [ISSTA'23] 1dFuzz: Reproduce 1-day Vulnerabilities with Directed Differential Fuzzing
+
+
+
+<details>
+  <summary>Click to see the abstract!</summary>
+1-day vulnerabilities are common in practice and have posed severe threats to end users, as adversaries could learn from released patches to find them and exploit them. Reproducing 1-day vulnerabilities is also crucial for defenders, e.g., to block attack traffic against 1-day vulnerabilities. A core question that affects the effectiveness of recognizing and triggering 1-day vulnerabilities is what is the unique feature of a security patch. After conducting a large-scale empirical study, we point out that a common and unique feature of patches is the trailing call sequence (TCS) and present a novel directed differential fuzzing solution 1dFuzz to efficiently reproduce 1-day vulnerabilities in this paper. Based on the TCS feature, we present a locator 1dLoc able to find candidate patch locations via static analysis, a novel TCS-based distance metric for directed fuzzing, and a novel sanitizer 1dSan able to catch PoCs for 1-day vulnerabilities during fuzzing. We have systematically evaluated 1dFuzz on a set of real-world software vulnerabilities in 11 different settings. Results show that 1dFuzz significantly outperforms state-of-the-art (SOTA) baselines and could find up to 2.26x more 1-day vulnerabilities with a 43% shorter time.
+</details>
