@@ -471,3 +471,19 @@ Fuzzers effectively explore programs to discover bugs. Greybox fuzzers mutate se
 FISHFUZZ introduces an input prioritization strategy that builds on three concepts: (i) a novel multi-distance metric whose precision is independent of the number of targets, (ii) a dynamic target ranking to automatically discard exhausted targets, and (iii) a smart queue culling algorithm, based on hyperparameters, that alternates between exploration and exploitation. FISHFUZZ enables fuzzers to seamlessly scale among thousands of targets and prioritize seeds toward interesting locations, thus achieving more comprehensive program testing. To demonstrate generality, we implement FISHFUZZ over two well-established greybox fuzzers (AFL and AFL++). We evaluate FISHFUZZ by leveraging all sanitizer labels as targets. In comparison to modern DGFs and state-of-the-art coverage guided fuzzers, FISHFUZZ reaches higher coverage compared to the direct competitors, finds up to 2.8x more
 bugs compared with the baseline and reproduces 68.3% existing bugs faster. FISHFUZZ also discovers 56 new bugs (38 CVEs) in 47 programs.
 </details>
+
+--------------------------------------------------------------------------------------------------------------------------
+### [arxiv'23] FGo: A Directed Grey-box Fuzzer with Probabilistic Exponential cut-the-loss Strategies
+
+[[paper]](https://arxiv.org/pdf/2307.05961.pdf) [[project]](https://github.com/harvey-lau/fgo) 
+  
+<details>
+  <summary>Click to see the abstract!</summary>
+Traditional coverage grey-box fuzzers perform a breadth-first search of the state space of Program Under Test (PUT). This aimlessness wastes a lot of computing resources. Directed grey-box fuzzing focuses on the target of PUT and becomes one of the most popular topics of software testing. The early termination of unreachable test cases is a method to improve directed grey-box fuzzing. However, existing solutions have two problems: firstly, reachability analysis needs to introduce extra technologies (e.g., static analysis); secondly, the performance of reachability analysis and auxiliary technologies lack versatility.
+
+We propose FGo, a probabilistic exponential cutthe-loss directed grey-box fuzzer. FGo terminates unreachable test cases early with exponentially increasing probability. Compared to other technologies, FGo makes full use of the unreachable information contained in iCFG and doesn‘t generate any additional overhead caused by reachability analysis. Moreover, it is easy to generalize to all PUT. This strategy based on probability is perfectly adapted to the randomness of fuzzing.
+
+The experiment results show that FGo is 106% faster than AFLGo in reproducing crashes. We compare multiple parameters of probabilistic exponential cut-the-loss algorithm and analyze them in detail. In addition, for enhancing the interpretability of FGo, this paper discusses the difference between the theoretical performance and the practical performance of
+probabilistic exponential cut-the-loss algorithm.
+</details>
+
