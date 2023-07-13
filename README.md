@@ -487,3 +487,16 @@ The experiment results show that FGo is 106% faster than AFLGo in reproducing cr
 probabilistic exponential cut-the-loss algorithm.
 </details>
 
+--------------------------------------------------------------------------------------------------------------------------
+### [Usenix'23] DAFL: Directed Grey-box Fuzzing Guided by Data Dependency
+
+[[paper]](https://prosys.kaist.ac.kr/publications/sec23.pdf) [[project]](https://github.com/prosyslab/DAFL-artifact) [[artifact]](https://zenodo.org/record/8031029) 
+  
+<details>
+  <summary>Click to see the abstract!</summary>
+Despite growing research interest, existing directed greybox fuzzers do not scale well with program complexity. In this paper, we identify two major scalability challenges for
+current directed grey-box fuzzing. Particularly, we find that traditional coverage feedback does not always provide meaningful guidance for reaching the target program point(s), and
+the existing seed distance mechanism does not operate well with programs with complex control structures. To address these problems, we present a novel fuzzer, named DAFL. DAFL selects code parts that are relevant to the target location and obtains coverage feedback only from those parts. Furthermore, it computes precise seed distances considering the data-flow semantics of program executions. The results are promising. Out of 41 real-world bugs, DAFL was able to find 4, 6, 9, and 5 more bugs within the given time, compared to AFL, AFLGo, WindRanger, and Beacon, respectively. Furthermore, among the cases where all fuzzers produced a median TTE, DAFL was at least 4.99 times faster on average compared to 3 state-of-the-art directed fuzzers including AFLGo, WindRanger, and Beacon.
+</details>
+
+
