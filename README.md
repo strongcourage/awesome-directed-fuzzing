@@ -499,4 +499,25 @@ current directed grey-box fuzzing. Particularly, we find that traditional covera
 the existing seed distance mechanism does not operate well with programs with complex control structures. To address these problems, we present a novel fuzzer, named DAFL. DAFL selects code parts that are relevant to the target location and obtains coverage feedback only from those parts. Furthermore, it computes precise seed distances considering the data-flow semantics of program executions. The results are promising. Out of 41 real-world bugs, DAFL was able to find 4, 6, 9, and 5 more bugs within the given time, compared to AFL, AFLGo, WindRanger, and Beacon, respectively. Furthermore, among the cases where all fuzzers produced a median TTE, DAFL was at least 4.99 times faster on average compared to 3 state-of-the-art directed fuzzers including AFLGo, WindRanger, and Beacon.
 </details>
 
+--------------------------------------------------------------------------------------------------------------------------
+### [EuroS&PW 2023'23] Guiding Directed Fuzzing with Feasibility
+
+[[paper]](https://www.computer.org/csdl/proceedings-article/eurospw/2023/272000a042/1OFtf6ngcTe)
+  
+<details>
+  <summary>Click to see the abstract!</summary>
+Directed fuzzing is a useful technique that can confirm bugs found by static analysis, reproduce existing bugs, and efficiently test code changes. A general mechanism in directed fuzzing is to calculate the distance between the current progress and the target, and use that as a feedback to guide the directed fuzzing. A fundamental problem with existing distance calculation is that it is feasibility-unaware. For instance, it always assumes that the two branches of an if statement have equal feasibility, which is likely not true in real-world programs and would inevitablly incur significant biases in the directed fuzzing. In this work, we propose feasibility-aware directed fuzzing, AFLGopher. Our new feasibility-aware distance calculation provides precise feedback to guide directed fuzzing to reach targets efficiently. We propose new techniques to address challenges of the feasibility prediction. Our new classification method allows to predict the feasibility of all branches based on limited traces, and our runtime feasibility-updating mechanism gradually improves the prediction precision. We implement AFLGopher, and the evaluation results show that AFLGopher uses less time to reach the bugs, compared to the state of the art.
+</details>
+
+--------------------------------------------------------------------------------------------------------------------------
+### [CCS'23] HyperGo: Probability-based Directed Hybrid Fuzzing
+
+[[paper]](https://arxiv.org/pdf/2307.07815.pdf) [[project]](https://gitee.com/paynelin/hypergo)
+  
+<details>
+  <summary>Click to see the abstract!</summary>
+Directed grey-box fuzzing (DGF) is a target-guided fuzzing intended for testing specific targets (e.g., the potential buggy code). Despite numerous techniques proposed to enhance directedness, the existing DGF techniques still face challenges, such as taking into account the difficulty of reaching different basic blocks when designing the fitness metric, and promoting the effectiveness of symbolic execution (SE) when solving the complex constraints in the path to the target. In this paper, we propose a directed hybrid fuzzer called
+HyperGo. To address the challenges, we introduce the concept of path probability and combine the probability with distance to form an adaptive fitness metric called probability-based distance. By combining the two factors, probability-based distance can adaptively guide DGF toward paths that are closer to the target and have more easy-to-satisfy path constraints. Then, we put forward an Optimized Symbolic Execution Complementary (OSEC) scheme to combine DGF and SE in a complementary manner. The OSEC would prune the unreachable branches and unsolvable branches, and prioritize symbolic execution of the seeds whose paths are closer to the target and have more branches that are difficult to be covered by DGF. We evaluated HyperGo on 2 benchmarks consisting of 21 programs with a total of 100 target sites. The experimental results show that HyperGo achieves 38.47×, 30.89×, 28.52×, 106.09× and 143.22× speedup compared to AFLGo, AFLGoSy, BEACON, WindRanger, and ParmeSan, respectively in reaching target sites, and 3.44×, 3.63×, 4.10×, 3.26×, and 3.00× speedup in exposing known
+vulnerabilities. Moreover, HyperGo discovered 37 undisclosed vulnerabilities from 7 real-world programs.
+</details>
 
