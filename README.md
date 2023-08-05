@@ -521,3 +521,15 @@ HyperGo. To address the challenges, we introduce the concept of path probability
 vulnerabilities. Moreover, HyperGo discovered 37 undisclosed vulnerabilities from 7 real-world programs.
 </details>
 
+--------------------------------------------------------------------------------------------------------------------------
+### [MS Thesis'23] Hybrid Testing: Combining Static Analysis and Directed Fuzzing
+
+[[paper]](https://dspace.mit.edu/bitstream/handle/1721.1/151679/shields-pshields-meng-eecs-2023-thesis.pdf?sequence=1&isAllowed=y)
+
+<details>
+  <summary>Click to see the abstract!</summary>
+New CVEs are discovered each year and their underlying bugs leave applications vulnerable to exploitation. Software is still frequently written in bug prone languages, e.g. C and C++,
+and a single missed check during manual testing can result in vulnerabilities. Existing automated testing tools such as fuzzing are limited in scope or in the case of static analysis, have a high false positive rate. Without improved automated testing, it can be challenging for developers to debug large, complex codebases. In this paper, Hybrid Testing is presented
+as a solution. Hybrid Testing combines static and dynamic analyses, leveraging static analysis to perform complex reasoning about logic, memory management, and concurrency. It creates a novel orchestration system which allows us to automatically verify the output of static analysis tools using directed fuzzing. Hybrid Testing is the first vulnerability detection technique with full codebase coverage and no false positives. It can be seamlessly integrated into the development cycle and scales well to large codebases. This work details the design and implementation of Hybrid Testing and evaluates its performance across a corpus of open-source C and C++ applications in the Magma benchmark. Hybrid Testing aims to promote more secure software through rigorous testing, making it easier for developers to detect security issues. We demonstrate Hybrid Testing can find vulnerabilities up to 25% faster with 17% higher accuracy (when detecting additional bugs) than current automated testing strategies.
+</details>
+
