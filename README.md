@@ -533,3 +533,16 @@ and a single missed check during manual testing can result in vulnerabilities. E
 as a solution. Hybrid Testing combines static and dynamic analyses, leveraging static analysis to perform complex reasoning about logic, memory management, and concurrency. It creates a novel orchestration system which allows us to automatically verify the output of static analysis tools using directed fuzzing. Hybrid Testing is the first vulnerability detection technique with full codebase coverage and no false positives. It can be seamlessly integrated into the development cycle and scales well to large codebases. This work details the design and implementation of Hybrid Testing and evaluates its performance across a corpus of open-source C and C++ applications in the Magma benchmark. Hybrid Testing aims to promote more secure software through rigorous testing, making it easier for developers to detect security issues. We demonstrate Hybrid Testing can find vulnerabilities up to 25% faster with 17% higher accuracy (when detecting additional bugs) than current automated testing strategies.
 </details>
 
+--------------------------------------------------------------------------------------------------------------------------
+### [Usenix'23] DDRace: Finding Concurrency UAF Vulnerabilities in Linux Drivers with Directed Fuzzing
+
+[[paper]](https://www.usenix.org/system/files/usenixsecurity23-yuan-ming.pdf) [[slides]](https://www.usenix.org/system/files/sec23_slides_yuan.pdf) [[project]](https://github.com/vul337/DDRace)
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Concurrency use-after-free (UAF) vulnerabilities account for a large portion of UAF vulnerabilities in Linux drivers. Many solutions have been proposed to find either concurrency bugs
+or UAF vulnerabilities, but few of them can be directly applied to efficiently find concurrency UAF vulnerabilities. In this paper, we propose the first concurrency directed greybox
+fuzzing solution DDRace to discover concurrency UAF vulnerabilities efficiently in Linux drivers. First, we identify candidate use-after-free locations as target sites and extract the relevant concurrency elements to reduce the exploration space of directed fuzzing. Second, we design a novel vulnerabilityrelated distance metric and an interleaving priority scheme
+to guide the fuzzer to better explore UAF vulnerabilities and thread interleavings. Lastly, to make test cases reproducible, we design an adaptive kernel state migration scheme to assist continuous fuzzing. We have implemented a prototype of DDRace, and evaluated it on upstream Linux drivers. Results show that DDRace is effective at discovering concurrency
+use-after-free vulnerabilities. It finds 4 unknown vulnerabilities and 8 known ones, which is more effective than other state-of-the-art solutions.
+</details>
