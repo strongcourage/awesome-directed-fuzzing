@@ -452,7 +452,7 @@ In this paper, we address this problem and develop a method for analyzing and co
 --------------------------------------------------------------------------------------------------------------------------
 ### [ISSTA'23] 1dFuzz: Reproduce 1-day Vulnerabilities with Directed Differential Fuzzing
 
-
+[[paper]](https://dl.acm.org/doi/pdf/10.1145/3597926.3598102)
 
 <details>
   <summary>Click to see the abstract!</summary>
@@ -490,7 +490,7 @@ probabilistic exponential cut-the-loss algorithm.
 --------------------------------------------------------------------------------------------------------------------------
 ### [Usenix'23] DAFL: Directed Grey-box Fuzzing Guided by Data Dependency
 
-[[paper]](https://prosys.kaist.ac.kr/publications/sec23.pdf) [[project]](https://github.com/prosyslab/DAFL-artifact) [[artifact]](https://zenodo.org/record/8031029) 
+[[paper]](https://prosys.kaist.ac.kr/publications/sec23.pdf) [[project]](https://github.com/prosyslab/DAFL-artifact) [[artifact]](https://zenodo.org/record/8031029) [[slides]](https://www.usenix.org/system/files/sec23_slides_kim-tae.pdf)
   
 <details>
   <summary>Click to see the abstract!</summary>
