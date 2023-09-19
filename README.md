@@ -291,7 +291,7 @@ Software development is a continuous and incremental process. Developers continu
 --------------------------------------------------------------------------------------------------------------------------
 ### [S&P'22] Exploit the Last Straw That Breaks Android Systems
   
-[[paper]](https://csdl-downloads.ieeecomputer.org/proceedings/sp/2022/1316/00/131600a542.pdf?Expires=1647015326&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9jc2RsLWRvd25sb2Fkcy5pZWVlY29tcHV0ZXIub3JnL3Byb2NlZWRpbmdzL3NwLzIwMjIvMTMxNi8wMC8xMzE2MDBhNTQyLnBkZiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTY0NzAxNTMyNn19fV19&Signature=rJF4u8XM~XIDFORJFw51vYaUx4308sf-eTh4sf8vl6CI1cQxyj3uFHFg2X29kGUhQPcF0nldALWaaFuwjTICLIBI~H8ExzGrVouInozTLxnazP-XCRkugWnIl4zoxF1KZBkUUAiWQp9RRp-N3G9KYWWkbdg-qoOekDGlUBmWV3wuRYAK3fTi70JxnR0JBHQvSf5xAogKvzLrToW8xU8~zjyAnRLkXUuUKyhA4jh0Dn2SkvCFzwSqExOHYWKaXpllO-Sx~kBX3GJgEJsx8c~WSfCHiio8icXLufgaLo7IVV1Dk7MhArAn4lTCaJEHmfL5XXIiDrme~PL45Xr7~0Hnsg__&Key-Pair-Id=K12PMWTCQBDMDT) [[project]](https://github.com/kekeLian/StrawFuzzer)
+[[paper]](https://yuanxzhang.github.io/paper/strawfuzzer-oakland22.pdf) [[project]](https://github.com/kekeLian/StrawFuzzer)
 
 <details>
   <summary>Click to see the abstract!</summary>
