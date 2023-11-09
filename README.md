@@ -605,3 +605,15 @@ After decades of research, constructing call graphs for modern C-based software 
 
 The results are encouraging — our implemented prototype called Coral can achieve similar precision versus the previous field-, flow-, and context-sensitive Andersen-style call graph construction, yet scale up to millions of lines of code for the first time, to the best of our knowledge. Moreover, by evaluating the produced call graphs through the lens of downstream clients (i.e., use-after-free detection, thin slicing, and directed grey-box fuzzing), the results show that Coral can dramatically improve their effectiveness for better vulnerability hunting, understanding, and reproduction. More excitingly, we found twelve confirmed bugs (six impacted by indirect calls) in popular systems (e.g., MariaDB), spreading across multiple historical versions.
 </details>
+
+--------------------------------------------------------------------------------------------------------------------------
+### [ICCAD'23] SurgeFuzz: Surge-Aware Directed Fuzzing for CPU Designs
+
+[[paper]](https://www.rsg.ci.i.u-tokyo.ac.jp/members/shioya/pdfs/Sugiyama-ICCAD'23.pdf) [[project]](https://github.com/shioya-lab-public/surgefuzz)
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Various verification methods have been proposed for bug detection in central processing unit (CPU) designs, yet their effectiveness remains insufficient. We have observed that such CPU bugs often occur in exceptional handling, such as pipeline stalls and flushes. We found that corner cases in such exceptional handling can be effectively verified through situations we term a ’surge’. A surge refers to a situation where events leading to exceptional handling occur frequently over a short period of time. For instance, a surge caused by frequent queue insertions can eventually fill the capacity, triggering exceptional handling such as a pipeline stall. We propose a novel fuzzing method for CPU designs, named SurgeFuzz, that intentionally generates surges. SurgeFuzz mutates input instruction sequences based on annotations to increase the occurrence of surges. This results in a higher density of event occurrences, thereby enabling efficient verification of corner cases in exceptional handling. We evaluated SurgeFuzz on a large processor design and found several unknown hardware bugs that are difficult to find with existing methods.
+</details>
+
+
