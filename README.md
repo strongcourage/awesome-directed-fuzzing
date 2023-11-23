@@ -522,6 +522,18 @@ vulnerabilities. Moreover, HyperGo discovered 37 undisclosed vulnerabilities fro
 </details>
 
 --------------------------------------------------------------------------------------------------------------------------
+### [CCS'23] SyzDirect: Directed Greybox Fuzzing for Linux Kernel
+
+
+  
+<details>
+  <summary>Click to see the abstract!</summary>
+Bug reports and patch commits are dramatically increasing for OS kernels, incentivizing a critical need for kernel-level bug reproduction and patch testing. Directed greybox fuzzing (DGF), aiming to stress-test a specific part of code, is a promising approach for bug reproduction and patch testing. However, the existing DGF methods exclusively target user-space applications, presenting intrinsic limitations in handling OS kernels. In particular, these methods cannot pinpoint the appropriate system calls and the needed syscall parameter values to reach the target location, resulting in low efficiency and waste of resources.
+
+In this paper, we present SyzDirect, a DGF solution for the Linux kernel. With a novel, scalable static analysis of the Linux kernel, SyzDirect identifies valuable information such as correct system calls and conditions on their arguments to reach the target location. During fuzzing, SyzDirect utilizes the static analysis results to guide the generation and mutation of test cases, followed by leveraging distance-based feedback for seed prioritization and power scheduling. We evaluated SyzDirect on upstream Linux kernels for bug reproduction and patch testing. The results show that SyzDirect can reproduce 320% more bugs and reach 25.6% more target patches than generic kernel fuzzers. It also improves the speed of bug reproduction and patch reaching by a factor of 154.3 and 680.9, respectively.
+</details>
+
+--------------------------------------------------------------------------------------------------------------------------
 ### [MS Thesis'23] Hybrid Testing: Combining Static Analysis and Directed Fuzzing
 
 [[paper]](https://dspace.mit.edu/bitstream/handle/1721.1/151679/shields-pshields-meng-eecs-2023-thesis.pdf?sequence=1&isAllowed=y)
