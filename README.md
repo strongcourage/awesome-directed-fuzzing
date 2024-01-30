@@ -649,4 +649,14 @@ Fuzzing is a widely adopted technique in the software industry to enhance securi
 deployed in AntGroup, a prominent FinTech company. Its performance has been evaluated in three distinct industrial scenarios: normalized fuzzing, iteration testing, and taint verification. Throughout five months of operation, MicroFuzz has diligently analyzed a substantial codebase, consisting of 261 Apps with over 74.6 million lines of code (LOC). The framework’s effectiveness is evident in its detection of 5,718 potential quality or security risks, with 1,764 of them confirmed and fixed as actual security threats by software specialists. Moreover, MicroFuzz significantly increased line coverage by 12.24% and detected new paths by 38.42% in the iteration testing.
 </details>
 
+--------------------------------------------------------------------------------------------------------------------------
+### [S&P'24] Everything is Good for Something: Counterexample-Guided Directed Fuzzing via Likely Invariant Inference
+
+[[paper]](https://5hadowblad3.github.io/files/Oakland24-Halo.pdf)
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Directed fuzzing demonstrates the potential to reproduce bug reports, verify patches, and debug vulnerabilities. State-of-the-art directed fuzzers prioritize inputs that are more likely to trigger the target vulnerability or filter irrelevant inputs unrelated to the targets. Despite these efforts, existing approaches struggle to reproduce specific vulnerabilities as most generated inputs are irrelevant. For instance, in the Magma benchmark, more than 94% of generated inputs miss the target vulnerability. We call this challenge the indirect input generation problem.
+We propose to increase the yield of inputs that reach the target location by restraining input generation. Our key insight is to infer likely invariants from both reachable and unreachable executed inputs to constrain the search space of the subsequent input generation and produce more reachable inputs. Moreover, we propose two selection strategies to minimize the fraction of unnecessary inputs for efficient invariant inference and deprioritize imprecise invariants for effective input generation. Halo, our prototype implementation, outperforms state-of-the-art directed fuzzers with a 15.3x speedup in reproducing target vulnerabilities by generating 6.2x more reachable inputs. During our evaluation, we also detected ten previously unknown bugs involving seven incomplete fixes in the latest versions of well-fuzzed targets.
+</details>
 
