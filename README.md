@@ -673,11 +673,11 @@ Fuzzing is a popular solution to finding vulnerabilities in software including I
 --------------------------------------------------------------------------------------------------------------------------
 ### [Usenix'24] SDFUZZ: Target States Driven Directed Fuzzing
 
-
+[[paper]](https://peng-hui.github.io/data/paper/sec24_sdfuzz.pdf)
 
 <details>
   <summary>Click to see the abstract!</summary>
-
+Directed fuzzers often unnecessarily explore program code and paths that cannot trigger the target vulnerabilities. We observe that the major application scenarios of directed fuzzing provide detailed vulnerability descriptions, from which highly-valuable program states (i.e., target states) can be derived, e.g., call traces when a vulnerability gets triggered. By driving to expose such target states, directed fuzzers can exclude massive unnecessary exploration. Inspired by the observation, we present SDFUZZ, an efficient directed fuzzing tool driven by target states. SDFUZZ first automatically extracts target states in vulnerability reports and static analysis results. SDFUZZ employs a selective instrumentation technique to reduce the fuzzing scope to the required code for reaching target states. SDFUZZ then early terminates the execution of a test case once SDFUZZ probes that the remaining execution cannot reach the target states. It further uses a new target state feedback and refines prior imprecise distance metric into a two-dimensional feedback mechanism to proactively drive the exploration towards the target states. We thoroughly evaluated SDFUZZ on known vulnerabilities and compared it to related works. The results show that SDFUZZ could improve vulnerability exposure capability with more vulnerability triggered and less time used, outperforming the state-of-the-art solutions. SDFUZZ could significantly improve the fuzzing throughput. Our application of SDFUZZ to automatically validate the static analysis results successfully discovered four new vulnerabilities in well-tested applications. Three of them have been acknowledged by developers.
 </details>
 
 --------------------------------------------------------------------------------------------------------------------------
