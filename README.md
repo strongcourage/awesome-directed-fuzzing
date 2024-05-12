@@ -153,6 +153,8 @@ contribute significantly to TOFU’s performance.
 
 [[paper]](https://arxiv.org/pdf/2005.11907.pdf)
 
+**Tags:** survey
+
 <details>
   <summary>Click to see the abstract!</summary>
 Greybox fuzzing has been the most scalable an practical approach to software testing. Most greybox fuzzing tools are coverage guided as code coverage is strongly correlated with bug coverage. However, since most covered codes may not contain bugs, blindly extending code coverage is less efficient, especially for corner cases. Unlike coverage-based fuzzers who extend the code coverage in an undirected manner, a directed fuzzer spends most of its time budget on reaching specific target locations (e.g., the bug-prone zone) without wasting resources stressing unrelated parts. Thus, directed greybox fuzzing is particularly suitable for
@@ -712,3 +714,14 @@ Directed fuzzing recently has gained significant attention due to its ability to
 The trade-off between exploration and exploitation stages poses a major challenge to Greybox fuzzing. TUNEFUZZ addresses this challenge through a novel input prioritization algorithm that maximizes the reached and triggered sanitizer labels. Our multi-distance metric and dynamic target ranking improve both exploration and exploitation. TUNEFUZZ found 56 new bugs (38 CVEs) in well-tested open source software.
 </details>
 
+--------------------------------------------------------------------------------------------------------------------------
+### [ASIACCS'24] SoK: Where to Fuzz? Assessing Target Selection Methods in Directed Fuzzing 
+
+[[paper]](https://mlsec.org/docs/2024c-asiaccs.pdf)
+
+**Tags:** survey
+
+<details>
+  <summary>Click to see the abstract!</summary>
+A common paradigm for improving fuzzing performance is to focus on selected regions of a program rather than its entirety. While previous work has largely explored how these locations can be reached, their selection, that is, the where, has received little attention so far. In this paper, we fill this gap and present the first comprehensive analysis of target selection methods for fuzzing. To this end, we examine papers from leading security and software engineering conferences, identifying prevalent methods for choosing targets. By modeling these methods as general scoring functions, we are able to compare and measure their efficacy on a corpus of more than 1,600 crashes from the OSS-Fuzz project. Our analysis provides new insights for target selection in practice: First, we find that simple software metrics significantly outperform other methods, including common heuristics used in directed fuzzing, such as recently modified code or locations with sanitizer instrumentation. Next to this, we identify language models as a promising choice for target selection. In summary, our work offers a new perspective on directed fuzzing, emphasizing the role of target selection as an orthogonal dimension to improve performance.
+</details>
