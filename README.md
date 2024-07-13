@@ -725,3 +725,31 @@ The trade-off between exploration and exploitation stages poses a major challeng
   <summary>Click to see the abstract!</summary>
 A common paradigm for improving fuzzing performance is to focus on selected regions of a program rather than its entirety. While previous work has largely explored how these locations can be reached, their selection, that is, the where, has received little attention so far. In this paper, we fill this gap and present the first comprehensive analysis of target selection methods for fuzzing. To this end, we examine papers from leading security and software engineering conferences, identifying prevalent methods for choosing targets. By modeling these methods as general scoring functions, we are able to compare and measure their efficacy on a corpus of more than 1,600 crashes from the OSS-Fuzz project. Our analysis provides new insights for target selection in practice: First, we find that simple software metrics significantly outperform other methods, including common heuristics used in directed fuzzing, such as recently modified code or locations with sanitizer instrumentation. Next to this, we identify language models as a promising choice for target selection. In summary, our work offers a new perspective on directed fuzzing, emphasizing the role of target selection as an orthogonal dimension to improve performance.
 </details>
+
+--------------------------------------------------------------------------------------------------------------------------
+### [ISSTA'24] DDGF: Dynamic Directed Greybox Fuzzing with Path Profiling
+
+[[paper]]()
+
+**Tags:** survey
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Coverage-Guided Fuzzing (CGF) has become the most popular and effective method for vulnerability detection. It is usually designed as an automated “black-box” tool. Security auditors start it and just wait for the results. However, CGF struggles to find new coverage gradually, thus making it inefficient. It is difficult for the user to explain reasons that prevent fuzzing from making further progress and to determine whether the existing coverage is sufficient. In addition, there is no way to interact and direct the fuzzing process.
+
+In this paper, we design the dynamic directed greybox fuzzing (DDGF) to facilitate collaboration between users and fuzzers. By leveraging Ball-Larus path profiling algorithm, we propose two new techniques: dynamic introspection and dynamic direction. Dynamic introspection reveals the significant imbalance in the distribution of path frequency through encoding and decoding. Based on the insight from introspection, users can dynamically direct the fuzzer to focus testing on the selected paths in real-time. We implement DDGF based on AFL++. Experiments on Magma show that DDGF is effective in helping the fuzzer to reproduce vulnerabilities faster, with up to 100x speedup in some programs and only 13% performance overhead. Moreover, DDGF detected 4 unknown vulnerabilities with one CVE ID assigned. DDGF shows the great potential of human-in-the-loop for fuzzing.
+</details>
+
+--------------------------------------------------------------------------------------------------------------------------
+### [ISSTA'24] Prospector: Boosting Directed Greybox Fuzzing for Large-scale Target Sets with Iterative Prioritization
+
+[[paper]]()
+
+**Tags:** survey
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Directed grey-box fuzzing (DGF) is an advanced technique in security testing, specifically designed to guide fuzzing tools toward predefined target sites within a software program. To improve its scalability on multiple targets, recent DGFs prioritize seeds that close to targets based on a more precise distance metric, and dynamically discard well-explored targets, thus steering toward all targets simultaneously. However, not all targets hold equal importance, particularly when facing large-scale target sets. Therefore, current works that blindly tracking all targets diverts computing resources from critical targets, thereby reducing the overall efficiency of triggering targets.
+
+In this paper, we present Prospector, a novel DGF approach that can handle large-scale target sets scenarios. Prospector employs an iterative process to focus on a select group of \textit{focused targets}. To dynamically maintain these targets, Prospector present a more fine-grained strategy that considers the vulnerable patterns and test adequacy of targets. Subsequently, Prospector further sharpens its fuzzing approach toward \textit{focused targets} by refining strategies in explore-exploit scheduling, seed selection, and byte scheduling. We evaluate Prospector on 24 programs by setting all sanitizer labels as targets. The experimental results show that Prospector outperforms AFL++, WindRanger, ParmeSan and FishFuzz by finding bugs 176.3x, 1882.3x, 2846x and 1.5x faster, respectively. Among 64 unique bugs in the program group with largest target sets, Prospector reproduces 33 (51.56%) existing bugs faster than other fuzzers. Prospector also discovered 6 new bugs in 4 real-world programs with 2 CVE IDs assigned.
+</details>
