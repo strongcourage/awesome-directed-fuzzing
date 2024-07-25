@@ -731,8 +731,6 @@ A common paradigm for improving fuzzing performance is to focus on selected regi
 
 [[paper]]()
 
-**Tags:** survey
-
 <details>
   <summary>Click to see the abstract!</summary>
 Coverage-Guided Fuzzing (CGF) has become the most popular and effective method for vulnerability detection. It is usually designed as an automated “black-box” tool. Security auditors start it and just wait for the results. However, CGF struggles to find new coverage gradually, thus making it inefficient. It is difficult for the user to explain reasons that prevent fuzzing from making further progress and to determine whether the existing coverage is sufficient. In addition, there is no way to interact and direct the fuzzing process.
@@ -745,11 +743,19 @@ In this paper, we design the dynamic directed greybox fuzzing (DDGF) to facilita
 
 [[paper]]()
 
-**Tags:** survey
-
 <details>
   <summary>Click to see the abstract!</summary>
 Directed grey-box fuzzing (DGF) is an advanced technique in security testing, specifically designed to guide fuzzing tools toward predefined target sites within a software program. To improve its scalability on multiple targets, recent DGFs prioritize seeds that close to targets based on a more precise distance metric, and dynamically discard well-explored targets, thus steering toward all targets simultaneously. However, not all targets hold equal importance, particularly when facing large-scale target sets. Therefore, current works that blindly tracking all targets diverts computing resources from critical targets, thereby reducing the overall efficiency of triggering targets.
 
 In this paper, we present Prospector, a novel DGF approach that can handle large-scale target sets scenarios. Prospector employs an iterative process to focus on a select group of \textit{focused targets}. To dynamically maintain these targets, Prospector present a more fine-grained strategy that considers the vulnerable patterns and test adequacy of targets. Subsequently, Prospector further sharpens its fuzzing approach toward \textit{focused targets} by refining strategies in explore-exploit scheduling, seed selection, and byte scheduling. We evaluate Prospector on 24 programs by setting all sanitizer labels as targets. The experimental results show that Prospector outperforms AFL++, WindRanger, ParmeSan and FishFuzz by finding bugs 176.3x, 1882.3x, 2846x and 1.5x faster, respectively. Among 64 unique bugs in the program group with largest target sets, Prospector reproduces 33 (51.56%) existing bugs faster than other fuzzers. Prospector also discovered 6 new bugs in 4 real-world programs with 2 CVE IDs assigned.
+</details>
+
+--------------------------------------------------------------------------------------------------------------------------
+### [DIMVA'24] Modularizing Directed Greybox Fuzzing for Binaries over Multiple CPU Architectures
+
+[[paper]]()
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Directed Greybox Fuzzing has proven effective in vulnerability detection areas such as bug reproduction and patch testing. However, existing directed fuzzers are often difficult to customize, lack modularity and have limited binary support. This constrains their usability on complex software or when the source code is unavailable; a challenge encountered when fuzzing embedded systems. This article addresses these limitations by introducing the Directed Fuzzing Toolkit (DRIFT) as a platform for directed fuzzing within the modular framework LibAFL. DRIFT modularizes techniques from the state-of-the-art directed fuzzer AFLGo and adapts them for binary applications thereby augmenting LibAFL’s highly customizable fuzzers with directed fuzzing capabilities. Additionally, by leveraging Ghidra’s analysis, DRIFT achieves architecture agnostic static analysis, opening doors for DGF to tackle previously challenging scenarios. Our evaluation of DRIFT shows a 90% correlation in static analysis metrics over binary compared to its source-code counterpart. Fuzzing performance was also notable despite operating over emulation. In benchmarks, DRIFT’s performance exceeds the original fuzzer with up to doubled bug discovery rates and 9–40x faster exploitation times of target bugs. These results are attributed to the toolkit’s modular design and its integration with LibAFL. Additionally, DRIFT includes a profiling platform for DGF metrics and is incorporated with the Magma benchmark. Together, these features position DRIFT as a practical advancement in directed fuzzing within LibAFL.
 </details>
