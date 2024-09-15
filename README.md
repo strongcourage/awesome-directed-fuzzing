@@ -741,7 +741,7 @@ In this paper, we design the dynamic directed greybox fuzzing (DDGF) to facilita
 --------------------------------------------------------------------------------------------------------------------------
 ### [ISSTA'24] Prospector: Boosting Directed Greybox Fuzzing for Large-scale Target Sets with Iterative Prioritization
 
-[[paper]]()
+[[paper]](https://dl.acm.org/doi/pdf/10.1145/3650212.3680365) [[artifact]](https://zenodo.org/records/12664230)
 
 <details>
   <summary>Click to see the abstract!</summary>
