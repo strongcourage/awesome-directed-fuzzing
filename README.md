@@ -781,3 +781,16 @@ reduction in distance computation allows PaZZER to use most of the time on actua
 Fuzzing best practices suggest that fuzzing should be run for at least 24 hours, if not longer. This recommendation makes it hard to integrate fuzzing into CI/CD contexts, to rapidly check a commit for bugs. Existing studies on CI/CD fuzzing simulated a CI/CD environment by running undirected fuzzers on Magma benchmark programs, which have multiple bugs injected into a single version of the program. Directed fuzzers, such as AFLGo, aim to generate
 inputs that reach specific target locations in the program being fuzzed. Thus, they should be more effective at fuzzing in a CI/CD environment. In this study, we propose to evaluate both directed and undirected fuzzers in a simulated CI/CD environment. Like prior work, we will use Magma as a source of benchmarks, and run fuzzers for 10 minutes. Unlike prior work, we will start the fuzzing process from a saturated corpus, rather than Magma’s default corpus. Also unlike prior work, we will run the fuzzers on versions of Magma programs with a single bug injected. To deal with the threat that Magma patches give directed fuzzers access to too precise information as to the bug location, we will also conduct experiments where we add additional lines of target code, to evaluate the sensitivity of directed fuzzers. Our registered report gives preliminary results on a small subset of benchmarks.
 </details>
+
+--------------------------------------------------------------------------------------------------------------------------
+### [arxiv'24] An Empirical Study on the Distance Metric in Guiding Directed Grey-box Fuzzing
+
+[[paper]](https://arxiv.org/pdf/2409.12701)
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Directed grey-box fuzzing (DGF) aims to discover vulnerabilities in specific code areas efficiently. Distance metric, which is used to measure the quality of seed in DGF, is a crucial factor in affecting the fuzzing performance. Despite distance metrics being widely applied in existing DGF frameworks, it remains opaque about how different distance metrics guide the fuzzing process and affect the fuzzing result in practice. In this paper, we conduct the first empirical study to explore how different distance metrics perform in guiding DGFs. Specifically, we systematically discuss different distance metrics in the aspect of calculation method and granularity. Then, we implement
+different distance metrics based on AFLGo. On this basis, we conduct comprehensive experiments to evaluate the performance of these distance metrics on the benchmarks widely used in existing DGF-related work. The experimental results demonstrate the following insights. First, the difference among different distance metrics with varying methods of calculation and granularities is not significant. Second, the distance metrics may not be effective
+in describing the difficulty of triggering the target vulnerability. In addition, by scrutinizing the quality of testcases, our research highlights the inherent limitation of existing mutation strategies in generating high-quality testcases, calling for designing effective mutation strategies for directed fuzzing. We open-source the implementation code and experiment dataset to facilitate future research in DGF.
+</details>
+
