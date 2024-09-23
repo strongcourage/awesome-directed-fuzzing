@@ -398,7 +398,7 @@ suffer from low efficiency. In this paper, we distinguish relevant code in the t
 --------------------------------------------------------------------------------------------------------------------------
 ### [TDSC'23] G-Fuzz: A Directed Fuzzing Framework for gVisor
 
-[[paper]](https://ieeexplore.ieee.org/abstract/document/10049484) [[project]](https://github.com/zjuchenyuan/gfuzz)
+[[paper]](https://arxiv.org/pdf/2409.13139) [[project]](https://github.com/zjuchenyuan/gfuzz)
 
 <details>
   <summary>Click to see the abstract!</summary>
