@@ -697,7 +697,7 @@ In this paper, we propose DeepGo, a predictive directed greybox fuzzer that can 
 --------------------------------------------------------------------------------------------------------------------------
 ### [FSE'24] Evaluating Directed Fuzzers: Are We Heading in the Right Direction?
 
-[[paper]](https://softsec.kaist.ac.kr/~sangkilc/papers/kim-fse24.pdf)
+[[paper]](https://softsec.kaist.ac.kr/~sangkilc/papers/kim-fse24.pdf) [[project]](https://github.com/prosyslab/evaluating-directed-fuzzing-artifact) [[artifact]](https://zenodo.org/records/10669580) [[slides]](https://prosys.kaist.ac.kr/publications/fse24-slides.pdf)
 
 <details>
   <summary>Click to see the abstract!</summary>
