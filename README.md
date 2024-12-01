@@ -794,3 +794,14 @@ different distance metrics based on AFLGo. On this basis, we conduct comprehensi
 in describing the difficulty of triggering the target vulnerability. In addition, by scrutinizing the quality of testcases, our research highlights the inherent limitation of existing mutation strategies in generating high-quality testcases, calling for designing effective mutation strategies for directed fuzzing. We open-source the implementation code and experiment dataset to facilitate future research in DGF.
 </details>
 
+--------------------------------------------------------------------------------------------------------------------------
+### [arxiv'24] TransferFuzz: Fuzzing with Historical Trace for Verifying Propagated Vulnerability Code
+
+[[paper]](https://arxiv.org/pdf/2411.18347) [[project]](https://github.com/Siyuan-Li201/TransferFuzz)
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Code reuse in software development frequently facilitates the spread of vulnerabilities, making the scope of affected software in CVE reports imprecise. Traditional methods primarily focus on identifying reused vulnerability code within target software, yet they cannot verify if these vulnerabilities can be triggered in new software contexts. This limitation often results in false positives. In this paper, we introduce TransferFuzz, a novel vulnerability verification framework, to verify whether vulnerabilities propagated through code reuse can be triggered in new software. Innovatively, we collected runtime information during the execution or fuzzing of the basic binary (the vulnerable binary detailed in CVE reports). This process allowed us to extract historical traces, which proved instrumental in guiding the fuzzing process for the target binary (the new binary that reused the vulnerable function). TransferFuzz introduces a unique Key Bytes Guided Mutation strategy and a Nested Simulated Annealing algorithm, which transfers these historical traces to implement trace-guided fuzzing on the target binary, facilitating the accurate and efficient verification of the propagated vulnerability. Our evaluation, conducted on widely recognized datasets, shows that TransferFuzz can quickly validate vulnerabilities previously unverifiable with existing techniques. Its verification speed is 2.5 to 26.2 times faster than existing methods. Moreover, TransferFuzz has proven its effectiveness by expanding the impacted software scope for 15 vulnerabilities listed in CVE reports, increasing the number of affected binaries from 15 to 53. The datasets and source code used in this article are available at https://github.com/Siyuan-Li201/TransferFuzz.
+</details>
+
+
