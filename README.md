@@ -512,7 +512,7 @@ Directed fuzzing is a useful technique that can confirm bugs found by static ana
 </details>
 
 --------------------------------------------------------------------------------------------------------------------------
-### [CCS'23] HyperGo: Probability-based Directed Hybrid Fuzzing
+### [arxiv'23] HyperGo: Probability-based Directed Hybrid Fuzzing
 
 [[paper]](https://arxiv.org/pdf/2307.07815.pdf) [[project]](https://gitee.com/paynelin/hypergo)
   
@@ -680,6 +680,16 @@ Fuzzing is a popular solution to finding vulnerabilities in software including I
 <details>
   <summary>Click to see the abstract!</summary>
 Directed fuzzers often unnecessarily explore program code and paths that cannot trigger the target vulnerabilities. We observe that the major application scenarios of directed fuzzing provide detailed vulnerability descriptions, from which highly-valuable program states (i.e., target states) can be derived, e.g., call traces when a vulnerability gets triggered. By driving to expose such target states, directed fuzzers can exclude massive unnecessary exploration. Inspired by the observation, we present SDFUZZ, an efficient directed fuzzing tool driven by target states. SDFUZZ first automatically extracts target states in vulnerability reports and static analysis results. SDFUZZ employs a selective instrumentation technique to reduce the fuzzing scope to the required code for reaching target states. SDFUZZ then early terminates the execution of a test case once SDFUZZ probes that the remaining execution cannot reach the target states. It further uses a new target state feedback and refines prior imprecise distance metric into a two-dimensional feedback mechanism to proactively drive the exploration towards the target states. We thoroughly evaluated SDFUZZ on known vulnerabilities and compared it to related works. The results show that SDFUZZ could improve vulnerability exposure capability with more vulnerability triggered and less time used, outperforming the state-of-the-art solutions. SDFUZZ could significantly improve the fuzzing throughput. Our application of SDFUZZ to automatically validate the static analysis results successfully discovered four new vulnerabilities in well-tested applications. Three of them have been acknowledged by developers.
+</details>
+
+--------------------------------------------------------------------------------------------------------------------------
+### [Usenix'24] Critical Code Guided Directed Greybox Fuzzing for Commits
+
+[[paper]](https://www.usenix.org/system/files/usenixsecurity24-xiang-yi.pdf)[[project]](https://github.com/NESA-Lab/WAFLGo) [[slides]](https://www.usenix.org/system/files/usenixsecurity24_slides-xiang-yi.pdf)
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Newly submitted commits are prone to introducing vulnerabilities into programs. As a promising countermeasure, directed greybox fuzzers can be employed to test commit changes by designating the commit change sites as targets. However, existing directed fuzzers primarily focus on reaching a single target and neglect the diverse exploration of the additional affected code. As a result, they may overlook bugs that crash at a distant site from the change site and lack directness in multi-target scenarios, which are both very common in the context of commit testing. In this paper, we propose WAFLGO, a direct greybox fuzzer, to effectively discover vulnerabilities introduced by commits. WAFLGO employs a novel critical code guided input generation strategy to thoroughly explore the affected code. Specifically, we identify two types of critical code: pathprefix code and data-suffix code. The critical code first guides the input generation to gradually and incrementally reach the change sites. Then while maintaining the reachability of the critical code, the input generation strategy further encourages the diversity of the generated inputs in exploring the affected code. Additionally, WAFLGO introduces a lightweight multitarget distance metric for directness and thorough examination of all change sites. We implement WAFLGO and evaluate it with 30 real-world bugs introduced by commits. Compared to eight state-of-the-art tools, WAFLGO achieves an average speedup of 10.3×. Furthermore, WAFLGO discovers seven new vulnerabilities including four CVEs while testing the most recent 50 commits of real-world software, including libtiff, fig2dev, and libming, etc
 </details>
 
 --------------------------------------------------------------------------------------------------------------------------
