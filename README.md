@@ -683,6 +683,16 @@ Directed fuzzers often unnecessarily explore program code and paths that cannot 
 </details>
 
 --------------------------------------------------------------------------------------------------------------------------
+### [Usenix'24] Critical Code Guided Directed Greybox Fuzzing for Commits
+
+[[paper]](https://www.usenix.org/system/files/usenixsecurity24-xiang-yi.pdf)[[project]](https://github.com/NESA-Lab/WAFLGo) [[slides]](https://www.usenix.org/system/files/usenixsecurity24_slides-xiang-yi.pdf)
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Newly submitted commits are prone to introducing vulnerabilities into programs. As a promising countermeasure, directed greybox fuzzers can be employed to test commit changes by designating the commit change sites as targets. However, existing directed fuzzers primarily focus on reaching a single target and neglect the diverse exploration of the additional affected code. As a result, they may overlook bugs that crash at a distant site from the change site and lack directness in multi-target scenarios, which are both very common in the context of commit testing. In this paper, we propose WAFLGO, a direct greybox fuzzer, to effectively discover vulnerabilities introduced by commits. WAFLGO employs a novel critical code guided input generation strategy to thoroughly explore the affected code. Specifically, we identify two types of critical code: pathprefix code and data-suffix code. The critical code first guides the input generation to gradually and incrementally reach the change sites. Then while maintaining the reachability of the critical code, the input generation strategy further encourages the diversity of the generated inputs in exploring the affected code. Additionally, WAFLGO introduces a lightweight multitarget distance metric for directness and thorough examination of all change sites. We implement WAFLGO and evaluate it with 30 real-world bugs introduced by commits. Compared to eight state-of-the-art tools, WAFLGO achieves an average speedup of 10.3×. Furthermore, WAFLGO discovers seven new vulnerabilities including four CVEs while testing the most recent 50 commits of real-world software, including libtiff, fig2dev, and libming, etc
+</details>
+
+--------------------------------------------------------------------------------------------------------------------------
 ### [NDSS'24] DeepGo: Predictive Directed Greybox Fuzzing
 
 [[paper]](https://www.ndss-symposium.org/wp-content/uploads/2024-514-paper.pdf) [[project]](https://gitee.com/paynelin/DeepGo)
