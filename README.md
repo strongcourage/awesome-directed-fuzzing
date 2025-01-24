@@ -512,7 +512,7 @@ Directed fuzzing is a useful technique that can confirm bugs found by static ana
 </details>
 
 --------------------------------------------------------------------------------------------------------------------------
-### [CCS'23] HyperGo: Probability-based Directed Hybrid Fuzzing
+### [arxiv'23] HyperGo: Probability-based Directed Hybrid Fuzzing
 
 [[paper]](https://arxiv.org/pdf/2307.07815.pdf) [[project]](https://gitee.com/paynelin/hypergo)
   
