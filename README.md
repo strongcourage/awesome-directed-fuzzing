@@ -824,3 +824,15 @@ Code reuse in software development frequently facilitates the spread of vulnerab
 Directed fuzzing performs best for targeted program testing via estimating the impact of each input in reaching predefined program points. But due to insufficient analysis of the program structure and lack of flexibility and configurability it can lose efficiency. In this paper, we enhance directed fuzzing with context weights for graph nodes and resolve indirect edges during call graph construction. We construct flexible tool for directed fuzzing with components able to be easily combined with other techniques. We implement proposed method in three separate modules: DiFuzzLLVM library for graph construction and indirect calls resolving, DiFuzz static analysis tool for processing program graphs and computing proximity metrics, and LibAFL-DiFuzz directed fuzzer based on LibAFL fuzzing library. We create additional LibAFL modules for enabling custom power scheduling and static instrumentation. We evaluate indirect calls resolving and get increase in directed fuzzing efficiency for reaching deeper target points. We evaluate context weights contribution and get benefits in TTE and scheduling iterations number. We evaluate our fuzzer in comparison with AFLGo and BEACON, and reveal speedup in time to exposure on several benchmarks. Furthermore, our tool implements some important usability features that are not available in mentioned tools: target points detection, multiple target points support, etc.
 </details>
 
+--------------------------------------------------------------------------------------------------------------------------
+### [ASIACCS'24] SoK: Where to Fuzz? Assessing Target Selection Methods in Directed Fuzzing
+
+[[paper]](https://arxiv.org/pdf/2502.08341) [[project]](https://github.com/wsbrg/crashminer)
+
+**Tags:** survey
+
+<details>
+  <summary>Click to see the abstract!</summary>
+A common paradigm for improving fuzzing performance is to focus on selected regions of a program rather than its entirety. While previous work has largely explored how these locations can be reached, their selection, that is, the where, has received little attention so far. In this paper, we fill this gap and present the first comprehensive analysis of target selection methods for fuzzing. To this end, we examine papers from leading security and software engineering conferences, identifying prevalent methods for choosing targets. By modeling these methods as general scoring functions, we are able to compare and measure their efficacy on a corpus of more than 1,600 crashes from the OSS-Fuzz project. Our analysis provides new insights for target selection in practice: First, we find that simple software metrics significantly outperform other methods, including common heuristics used in directed fuzzing, such as recently modified code or locations with sanitizer instrumentation. Next to this, we identify language models as a promising choice for target selection. In summary, our work offers a new perspective on directed fuzzing, emphasizing the role of target selection as an orthogonal dimension to improve performance.
+</details>
+
