@@ -888,7 +888,7 @@ In this paper, we investigate the practical impact of these issues by means of a
 </details>
 
 --------------------------------------------------------------------------------------------------------------------------
-### [MS Thesis'25] CGFuzzerArt: A Dir t: A Directed Gr ected Graybox Fuzzer for V er for Vulnerability Discovery
+### [MS Thesis'25] CGFuzzerArt: A Directed Graybox Fuzzer for Vulnerability Discovery
 
 [[paper]](https://scholar.dsu.edu/cgi/viewcontent.cgi?article=1492&context=theses)
 
