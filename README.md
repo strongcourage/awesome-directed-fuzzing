@@ -887,6 +887,16 @@ While greybox fuzzing is routinely applied in production environments with great
 In this paper, we investigate the practical impact of these issues by means of an analysis and evaluation of a representative set of popular directed greybox fuzzers. As a way forward, we then present LIBAFLGO, a modular directed fuzzing framework that addresses all three issues and allows one to directly compare different directed fuzzing policies on top of a modern fuzzing stack. Our experimental results on state-of-the-art directed fuzzing policies provide two main insights. First, the original AFLGo policies outperform more recent directed fuzzing policies when testing on a modern fuzzing stack. Second, none of the directed fuzzing policies can favorably compete with (nondirected) LibAFL, which scored better overall performance across benchmarks. As such, the quest for efficient directed fuzzing policies must continue.
 </details>
 
+--------------------------------------------------------------------------------------------------------------------------
+### [MS Thesis'25] CGFuzzerArt: A Dir t: A Directed Gr ected Graybox Fuzzer for V er for Vulnerability Discovery
+
+[[paper]](https://scholar.dsu.edu/cgi/viewcontent.cgi?article=1492&context=theses)
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Fuzzing is an effective approach to mitigating vulnerabilities in software applications. It encompasses various types of fuzzing, including black-box, white-box, and gray-box, each with advantages and limitations. This research presents a novel method to improve the efficiency of coverage-guided directed gray-box fuzzers by improving the understanding of indirect function calls in the call graph and leveraging ThinLTO when generating an instrumented binary. A more comprehensive call graph enables fuzzers to navigate more effectively toward their targets, particularly when the target resides within a method invoked through a function pointer. This research addresses four research questions: 1) Can we improve the efficiency of the directed gray-box fuzzer by improving its ability to understand indirect function calls better? 2) Can we use a call graph to direct our gray-box fuzzer to fuzz where libraries are used in the code? 3) Can we export information from the fuzzing engine to inform us if all areas of interest have been covered? 4) How effective is our directed gray-box fuzzer compared to other fuzzers such as AFL++ and AFLGo? The methodology follows Wieringa’s design-science research approach, which consists of four phases: problem investigation, treatment design, validation, and implementation. The evaluation results demonstrated that CGFuzzerArt improved efficiency by incorporating a call graph with a better understanding of indirect function calls. It successfully identified libraries and expanded its target list, effectively exporting information on whether a target was reached. It outperformed existing fuzzers, such as AFL++ and AFLGo, by reaching targets more frequently and in less time.
+</details>
+
 
 
 
