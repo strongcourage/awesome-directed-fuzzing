@@ -837,6 +837,16 @@ A common paradigm for improving fuzzing performance is to focus on selected regi
 </details>
 
 --------------------------------------------------------------------------------------------------------------------------
+### [arxiv'24] ISC4DGF: Enhancing Directed Grey-box Fuzzing with LLM-Driven Initial Seed Corpus Generation
+
+[[paper]](https://arxiv.org/pdf/2409.14329)
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Fuzz testing is crucial for identifying software vulnerabilities, with coverage-guided grey-box fuzzers like AFL and Angora excelling in broad detection. However, as the need for targeted detection grows, directed grey-box fuzzing (DGF) has become essential, focusing on specific vulnerabilities. The initial seed corpus, which consists of carefully selected input samples that the fuzzer uses as a starting point, is fundamental in determining the paths that the fuzzer explores. A well-designed seed corpus can guide the fuzzer more effectively towards critical areas of the code, improving the efficiency and success of the fuzzing process. Even with its importance, many works concentrate on refining guidance mechanisms while paying less attention to optimizing the initial seed corpus. In this paper, we introduce ISC4DGF, a novel approach to generating optimized initial seed corpus for DGF using Large Language Models (LLMs). By leveraging LLMs’ deep software understanding and refined user inputs, ISC4DGF creates precise seed corpus that efficiently trigger specific vulnerabilities. Implemented on AFL and tested against state-of-the-art fuzzers like AFLGo, FairFuzz, and Entropic using the Magma benchmark, ISC4DGF achieved a 35.63x speedup and 616.10x fewer target reaches. Moreover, ISC4DGF focused on more effectively detecting target vulnerabilities, enhancing efficiency while operating with reduced code coverage.
+</details>
+
+--------------------------------------------------------------------------------------------------------------------------
 ### [Usenix'25] Effective Directed Fuzzing with Hierarchical Scheduling for Web Vulnerability Detection
 
 [[paper]](https://yuanxzhang.github.io/paper/WDFuzz-security25.pdf)
