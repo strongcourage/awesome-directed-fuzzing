@@ -889,7 +889,7 @@ Directed fuzzing is a critical technique in cybersecurity, targeting specific se
 --------------------------------------------------------------------------------------------------------------------------
 ### [EuroS&P'25] LibAFLGO: Evaluating and Advancing Directed Greybox Fuzzing
 
-[[paper]](https://download.vusec.net/papers/libaflgo_eurosp25.pdf)
+[[paper]](https://download.vusec.net/papers/libaflgo_eurosp25.pdf) [[project]](https://github.com/vusec/libaflgo)
 
 <details>
   <summary>Click to see the abstract!</summary>
