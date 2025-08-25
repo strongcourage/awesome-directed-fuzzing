@@ -871,6 +871,16 @@ We compared Lyso to eight state-of-the-art (directed) fuzzers. Our evaluation de
 </details>
 
 --------------------------------------------------------------------------------------------------------------------------
+### [Usenix'25] IDFUZZ: Intelligent Directed Grey-box Fuzzing
+
+[[paper]](https://www.usenix.org/system/files/usenixsecurity25-chen-yiyang.pdf) [[project]](https://github.com/vul337/IDFuzz) [[artifact]](https://zenodo.org/records/13753907)
+  
+<details>
+  <summary>Click to see the abstract!</summary>
+Directed grey-box fuzzing aims to test target code in programs and is widely utilized in various scenarios, including patch testing, candidate vulnerability confirmation, and known vulnerability reproduction. However, we find that existing directed fuzzers generally lack effective input mutation strategies and resort to the randomness and empiricism inherent in AFL-based strategies, which prove to be inefficient in directed fuzzing contexts. This paper presents IDFUZZ, an intelligent input mutation solution for directed fuzzing. Our key insight is to leverage a neural network model to learn from historically mutated inputs and extract useful experience that can guide input mutation towards the target code. We introduce several novel techniques in model construction and model training, which help build a model that well captures experience on how to cover both explored and unexplored code relevant to the target. We further devise a refined model gradient-guided scheme that leverages the experience to locate critical input fields and develop a directed input mutation strategy. We implement IDFUZZ as an input mutation module that complements most open-source state-of-the-art directed fuzzers. In our evaluation, IDFUZZ significantly accelerates existing directed fuzzers by over 2.48x in reproducing target vulnerabilities on the Google Fuzzer Test Suite. Moreover, we demonstrate that IDFUZZ helps existing directed fuzzers reduce ineffective mutations by 91.86%. Lastly, we detected 6 previously unknown vulnerabilities with 4 CVE IDs assigned so far and 1 incomplete fix of a high-severity vulnerability in well-tested real-world software using IDFUZZ.
+</details>
+
+--------------------------------------------------------------------------------------------------------------------------
 ### [arxiv'25] Directed Greybox Fuzzing via Large Language Model
 
 [[paper]](https://arxiv.org/pdf/2505.03425)
