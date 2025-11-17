@@ -985,6 +985,18 @@ Directed fuzzing is an effective software testing method that guides the fuzzing
 In this paper, we propose a novel directed fuzzing solution named CSFuzz, which considers program states associated with the targets. First, CSFuzz extracts critical variables related to the target sites from the program using static analysis. Then, CSFuzz monitors the runtime values of these critical variables and infers the program states associated with the targets by adaptively partitioning the range of variable values. This allows CSFuzz to store interesting seeds in the state corpus that trigger new states near the target sites. Lastly, CSFuzz employs dynamic scheduling techniques to guide the fuzzing campaign in selecting different corpora and prioritizing seeds. This ensures more adequate testing of the target sites. We have implemented a prototype of CSFuzz and evaluated it on 2 benchmarks and widely fuzzed real-world software. Evaluation results show that CSFuzz outperforms state-of-the-art fuzzers in terms of vulnerability detection capability, achieving a maximum speedup of 219%. Moreover, CSFuzz has discovered 4 new bugs, including 2 CVE IDs assigned.
 </details>
 
+--------------------------------------------------------------------------------------------------------------------------
+### [arxiv'25] AFLGopher: Accelerating Directed Fuzzing via Feasibility-Aware Guidance
+
+[[paper]](https://arxiv.org/pdf/2511.10828)
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Directed fuzzing is a useful testing technique that aims to efficiently reach target code sites in a program. It has a wide range of applications, such as assessing the severity of vulnerabilities, confirming bugs found by static analysis, reproducing existing bugs, and testing code changes. The core of directed fuzzing is the guiding mechanism that directs the fuzzing to the specified target. A general guiding mechanism adopted in existing directed fuzzers is to calculate the control-flow distance between the current progress and the target, and use that as feedback to guide the directed fuzzing. A fundamental problem with the existing guiding mechanism is
+that the distance calculation is feasibility-unaware. For instance, it always assumes that the two branches of an if statement have equal feasibility, which is likely not true in real-world programs and would inevitably incur significant biases that mislead directed fuzzing.
+In this work, we propose feasibility-aware directed fuzzing named AFLGopher. Our new feasibility-aware distance calculation provides pragmatic feedback to guide directed fuzzing to reach targets efficiently. We propose new techniques to address the challenges of feasibility prediction. Our new classification method allows us to predict the feasibility of all branches based on limited traces, and our runtime feasibility-updating mechanism gradually and efficiently improves the prediction precision. We implemented AFLGopher and compared AFLGopher with state-of-the-art directed fuzzers including AFLGo, enhanced AFLGo, WindRanger, BEACON and SelectFuzz. AFLGopher is 3.76×, 2.57×, 3.30×, 2.52× and 2.86× faster than AFLGo, BEACON, WindRanger, SelectFuzz and enhanced AFLGo, respectively, in reaching targets. AFLGopher is 5.60×, 5.20×, 4.98×, 4.52×, and 5.07× faster than AFLGo, BEACON, WindRanger, SelectFuzz and enhanced AFLGo, respectively, in triggering known vulnerabilities.
+</details>
+
 
 
 
