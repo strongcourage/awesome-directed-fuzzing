@@ -1020,3 +1020,13 @@ In the domain of software security testing, Directed Grey-Box Fuzzing (DGF) has 
 real-world effectiveness. To address this, we introduce attention distance, a novel metric that leverages a large language model’s contextual analysis to compute attention scores between code elements and reveal their intrinsic connections. Under the same AFLGo configuration—without altering any fuzzing components other than the distance metric—replacing physical distances with attention distances across 38 real vulnerability reproduction experiments delivers a 3.43× average increase in testing efficiency over the traditional method. Compared to state-of-the-art directed fuzzers DAFL and WindRanger, our approach achieves 2.89× and 7.13× improvements, respectively. To further validate the generalizability of attention distance, we integrate it into DAFL and WindRanger, where it also consistently enhances their original performance. All related code and datasets are publicly available at https://anonymous.4open.science/r/Attention_Distance-4650.
 </details>
 
+--------------------------------------------------------------------------------------------------------------------------
+### [arxiv'25] Triggering and Detecting Exploitable Library Vulnerability from the Client by Directed Greybox Fuzzing
+
+[[paper]](https://arxiv.org/pdf/2604.04102)
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Developers utilize third-party libraries to improve productivity, which also introduces potential security risks. Existing approaches generate tests for public functions to trigger library vulnerabilities from client programs, yet they depend on proof-of-concepts (PoCs), which are often unavailable. In this paper, we propose a new approach, LiveFuzz, based on directed greybox fuzzing (DGF) to detect the exploitability of library vulnerabilities from client programs without PoCs. LiveFuzz exploits a target tuple to extend existing DGF techniques to cross-program scenarios. Based on the target tuple, LiveFuzz introduces a novel Abstract Path Mapping mechanism to project execution paths, mitigating the preference
+for shorter paths. LiveFuzz also proposes a risk-based adaptive mutation to mitigate excessive mutation. To evaluate LiveFuzz, we construct a new dataset including 61 cases of library vulnerabilities exploited from client programs. Results show that LiveFuzz increases the number of target-reachable paths compared with all baselines and improves the average speed of vulnerability exposure. Three vulnerabilities are triggered exclusively by LiveFuzz.
+</details>
