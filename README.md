@@ -1054,7 +1054,7 @@ One-day vulnerabilities pose significant risks due to delayed or incomplete patc
 --------------------------------------------------------------------------------------------------------------------------
 ### [S&P'26] TrigFuzz: Triggering Conditions Guided Directed Fuzzing
 
-[[paper]](https://www.computer.org/csdl/proceedings-article/sp/2026/606500c714/2geEWsvZ3sA)
+[[paper]](https://vul337.github.io/TrigFuzz/trigfuzz.pdf) [[project]](https://github.com/vul337/TrigFuzz)
 
 <details>
   <summary>Click to see the abstract!</summary>
