@@ -348,19 +348,6 @@ Directed greybox fuzzing (DGF) can quickly discover or reproduce bugs in program
 </details>
 
 --------------------------------------------------------------------------------------------------------------------------
-### [arxiv'22] FishFuzz: Throwing Larger Nets to Catch Deeper Bugs
-  
-[[paper]](https://arxiv.org/pdf/2207.13393.pdf) [[project]](https://zenodo.org/record/6405418#.YuzNvexBz_o)
-
-<details>
-  <summary>Click to see the abstract!</summary>
-Greybox fuzzing is the de-facto standard to discover bugs during development. Fuzzers execute many inputs to maximize the amount of reached code. Recently, Directed Greybox Fuzzers (DGFs) propose an alternative strategy that goes beyond “just” coverage: driving testing toward specific code targets by selecting “closer” seeds. DGFs go through different phases: exploration (i.e., reaching interesting locations) and exploitation (i.e., triggering bugs). In practice, DGFs leverage coverage to directly measure exploration, while exploitation is, at best, measured indirectly by alternating between different targets. Specifically, we observe two limitations in existing DGFs: (i) they lack precision in their distance metric, i.e., averaging multiple
-paths and targets into a single score (to decide which seeds to prioritize), and (ii) they assign energy to seeds in a round-robin fashion without adjusting the priority of the targets (exhaustively explored targets should be dropped).
-  
-We propose FishFuzz, which draws inspiration from trawl fishing: first casting a wide net, scraping for high coverage, then slowly pulling it in to maximize the harvest. The core of our fuzzer is a novel seed selection strategy that builds on two concepts: (i) a novel multi-distance metric whose precision is independent of the number of targets, and (ii) a dynamic target ranking to automatically discard exhausted targets. This strategy allows FishFuzz to seamlessly scale to tens of thousands of targets and dynamically alternate between exploration and exploitation phases. We evaluate FishFuzz by leveraging all sanitizer labels as targets. Extensively comparing FishFuzz against modern DGFs and coverage-guided fuzzers shows that FishFuzz reached higher coverage compared to the direct competitors, reproduces existing bugs (70.2% faster), and finally discovers 25 new bugs (18 CVEs) in 44 programs.
-</details>
-
---------------------------------------------------------------------------------------------------------------------------
 ### [CCS'22] MC2: Rigorous and Efficient Directed Greybox Fuzzing
   
 [[paper]](https://arxiv.org/pdf/2208.14530.pdf) [[project]](https://hub.docker.com/r/abhishekshah212/mc2)
@@ -464,7 +451,7 @@ In this paper, we address this problem and develop a method for analyzing and co
 --------------------------------------------------------------------------------------------------------------------------
 ### [Usenix'23] FishFuzz: Catch Deeper Bugs by Throwing Larger Nets
 
-[[paper]](https://nebelwelt.net/files/23SEC5.pdf) [[project]](https://github.com/HexHive/FishFuzz) [[artifact]](https://zenodo.org/record/6405418) 
+[[paper]](https://nebelwelt.net/files/23SEC5.pdf) [[preprint]](https://arxiv.org/pdf/2207.13393.pdf) [[project]](https://github.com/HexHive/FishFuzz) [[artifact]](https://zenodo.org/record/6405418)
   
 <details>
   <summary>Click to see the abstract!</summary>
@@ -727,7 +714,7 @@ The trade-off between exploration and exploitation stages poses a major challeng
 --------------------------------------------------------------------------------------------------------------------------
 ### [ASIACCS'24] SoK: Where to Fuzz? Assessing Target Selection Methods in Directed Fuzzing 
 
-[[paper]](https://mlsec.org/docs/2024c-asiaccs.pdf)
+[[paper]](https://mlsec.org/docs/2024c-asiaccs.pdf) [[preprint]](https://arxiv.org/pdf/2502.08341) [[project]](https://github.com/wsbrg/crashminer)
 
 **Tags:** survey
 
@@ -771,17 +758,6 @@ Directed Greybox Fuzzing has proven effective in vulnerability detection areas s
 </details>
 
 --------------------------------------------------------------------------------------------------------------------------
-### [Fuzzing'24] Effective Fuzzing within CI/CD Pipelines (Registered Report)
-
-[[paper]](https://srg.doc.ic.ac.uk/files/papers/pazzer-fuzzing-24.pdf) [[artifact]](https://figshare.com/articles/dataset/Artifact_for_Effective_Fuzzing_within_CI_CD_Pipelines_Registered_Report_/26075962/3)
-
-<details>
-  <summary>Click to see the abstract!</summary>
-Deploying fuzzing within CI/CD pipelines can help ensure safe and secure code evolution. Directed greybox fuzzing techniques such as AFLGo are a good match for the CI/CD context. These techniques prioritise inputs based on estimated distances to the changed code. Unfortunately, computing these distances is often expensive, making the techniques impractical for short CI/CD runs. In this paper, we propose an AFLGo-based technique called PaZZER, which optimises the distance calculation by dropping the expensive control-flow graph component and computing the callgraph component in an incremental fashion. Preliminary results are promising, showing that PaZZER can make CI/CD testing feasible for large applications: e.g., for Objdump the distance computation time is decreased from 34 min to just 2.5 min, with a further 2.3 min saved when an incremental algorithm is used. The significant time
-reduction in distance computation allows PaZZER to use most of the time on actual fuzzing, making it practical for short CI/CD runs of around 10 minutes. Our planned full evaluation will involve real-world commits from a diverse set of nine applications of different sizes. This will include coverage experiments and an ablation study to investigate the impact of PaZZER’s design decisions, and a bug-finding case study comparing it against AFLGo and Google’s CIFuzz. We will assess the benefits and effectiveness of our approach in terms of patch coverage, patch proximity, distance computation time, and time-to-exposure for bugs.
-</details>
-
---------------------------------------------------------------------------------------------------------------------------
 ### [Fuzzing'24] Directed or Undirected: Investigating Fuzzing Strategies in a CI/CD Setup (Registered Report)
 
 [[paper]](https://dl.acm.org/doi/pdf/10.1145/3678722.3685532)
@@ -822,18 +798,6 @@ Code reuse in software development frequently facilitates the spread of vulnerab
 <details>
   <summary>Click to see the abstract!</summary>
 Directed fuzzing performs best for targeted program testing via estimating the impact of each input in reaching predefined program points. But due to insufficient analysis of the program structure and lack of flexibility and configurability it can lose efficiency. In this paper, we enhance directed fuzzing with context weights for graph nodes and resolve indirect edges during call graph construction. We construct flexible tool for directed fuzzing with components able to be easily combined with other techniques. We implement proposed method in three separate modules: DiFuzzLLVM library for graph construction and indirect calls resolving, DiFuzz static analysis tool for processing program graphs and computing proximity metrics, and LibAFL-DiFuzz directed fuzzer based on LibAFL fuzzing library. We create additional LibAFL modules for enabling custom power scheduling and static instrumentation. We evaluate indirect calls resolving and get increase in directed fuzzing efficiency for reaching deeper target points. We evaluate context weights contribution and get benefits in TTE and scheduling iterations number. We evaluate our fuzzer in comparison with AFLGo and BEACON, and reveal speedup in time to exposure on several benchmarks. Furthermore, our tool implements some important usability features that are not available in mentioned tools: target points detection, multiple target points support, etc.
-</details>
-
---------------------------------------------------------------------------------------------------------------------------
-### [ASIACCS'24] SoK: Where to Fuzz? Assessing Target Selection Methods in Directed Fuzzing
-
-[[paper]](https://arxiv.org/pdf/2502.08341) [[project]](https://github.com/wsbrg/crashminer)
-
-**Tags:** survey
-
-<details>
-  <summary>Click to see the abstract!</summary>
-A common paradigm for improving fuzzing performance is to focus on selected regions of a program rather than its entirety. While previous work has largely explored how these locations can be reached, their selection, that is, the where, has received little attention so far. In this paper, we fill this gap and present the first comprehensive analysis of target selection methods for fuzzing. To this end, we examine papers from leading security and software engineering conferences, identifying prevalent methods for choosing targets. By modeling these methods as general scoring functions, we are able to compare and measure their efficacy on a corpus of more than 1,600 crashes from the OSS-Fuzz project. Our analysis provides new insights for target selection in practice: First, we find that simple software metrics significantly outperform other methods, including common heuristics used in directed fuzzing, such as recently modified code or locations with sanitizer instrumentation. Next to this, we identify language models as a promising choice for target selection. In summary, our work offers a new perspective on directed fuzzing, emphasizing the role of target selection as an orthogonal dimension to improve performance.
 </details>
 
 --------------------------------------------------------------------------------------------------------------------------
@@ -1112,7 +1076,7 @@ The widespread adoption of Internet of Things (IoT) devices has expanded the dig
 --------------------------------------------------------------------------------------------------------------------------
 ### [TSE'26] Effective Fuzzing within CI/CD Pipelines
 
-[[paper]](https://dl.acm.org/doi/pdf/10.1145/3841630) [[artifact]](https://srg.doc.ic.ac.uk/projects/pazzer/)
+[[paper]](https://dl.acm.org/doi/pdf/10.1145/3841630) [[registered report]](https://srg.doc.ic.ac.uk/files/papers/pazzer-fuzzing-24.pdf) [[artifact]](https://srg.doc.ic.ac.uk/projects/pazzer/) [[registered-report artifact]](https://figshare.com/articles/dataset/Artifact_for_Effective_Fuzzing_within_CI_CD_Pipelines_Registered_Report_/26075962/3)
 
 <details>
   <summary>Click to see the abstract!</summary>
