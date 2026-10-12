@@ -1094,3 +1094,24 @@ CI/CD runs. In this paper, we propose an AFLGo-based technique called PaZZer, wh
 Firmware vulnerabilities in IoT devices pose serious security threats, yet state-of-the-art taint analysis tools often generate large numbers of reports with limited validation. We present Bond, a directed fuzzing framework that bridges static taint analysis and dynamic vulnerability validation. Bond introduces constraint-guided input mutation by integrating three
 categories of constraints with six semantic types, enabling efficient exploration of paths associated with taint reports. We evaluate Bond on 19 IoT devices from 8 vendors, covering 2,776 taint reports produced by four state-of-the-art taint analyzers. Bond successfully validated 1,349 reports as real vulnerabilities, including 155 previously unknown vulnerabilities, of which 108 have been assigned CVE/PSV identifiers. On 60 known vulnerabilities, Bond achieved a 91.67% recall rate. Compared with four leading IoT fuzzers, Bond improves vulnerability validation by up to 5.5X. Ablation studies further demonstrate the effectiveness of Bond’s key components and constraint extraction. These results establish Bond as a practical and effective framework for validating firmware taint analysis results.
 </details>
+
+--------------------------------------------------------------------------------------------------------------------------
+### [ASE'26] CtxFuzz: Context-Aware Directed Fuzzing via Runtime Fuzzer-Agent Cooperation
+
+[[paper]](https://dl.acm.org/doi/pdf/10.1145/3832783.3834365) [[artifact]](https://zenodo.org/records/19248087)
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Automated tools produce vulnerability reports at unprecedented scale, but turning a report into a confirmed proof-of-vulnerability remains challenging. Directed grey-box fuzzers are widely used for validation but lack the ability to consume the rich context these reports carry, reducing each target to a bare location. In contrast, LLM-based approaches can consume this context but are often unable to identify the true triggering mechanism or to synthesize a working proof-of-vulnerability. We present CtxFuzz, a context-aware directed fuzzer that enables an LLM agent and a coverage-guided fuzzer to iteratively exchange and refine bug-triggering context throughout the campaign. The fuzzer contributes execution context, such as what inputs were tried and how the program behaved, grounding the agent’s reasoning in concrete evidence. The agent contributes semantic context, including hypotheses about the triggering conditions, explanations of failed attempts, and targeted mutations to overcome them, guiding the fuzzer toward relevant regions of the input space. Failed attempts are not discarded but decomposed into mutation scripts that translate each identified blocker into a fuzzer-executable strategy. This iterative exchange enables CtxFuzz to trigger vulnerabilities
+that neither directed fuzzers nor LLM agents reach independently. On 62 vulnerabilities across 16 open-source projects from the AIxCC Final competition (39 C, 23 Java), CtxFuzz exposes 61 of 62 targets, including 29 that no state-of-the-art directed fuzzer reaches, and exposes two zero-day vulnerabilities through a realworld vulnerability report validation pipeline.
+</details>
+
+--------------------------------------------------------------------------------------------------------------------------
+### [ASE'26] ExcavatorFuzz: LLM-Guided Path-Difficulty-Driven Directed Greybox Fuzzing
+
+[[paper]](https://dl.acm.org/doi/10.1145/3832783.3837497)
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Directed greybox fuzzing (DGF) is effective at steering mutations toward vulnerable code regions, but its efficiency is often limited by two bottlenecks: misprioritized target-reaching paths and hard-to-satisfy blocking predicates. We present ExcavatorFuzz, an LLM-assisted DGF framework that addresses both challenges in a unified workflow. ExcavatorFuzz first performs CLI-aware feasibility filtering to prune configuration-infeasible paths, and then ranks the remaining candidate paths using a lightweight difficulty metric that approximates their relative tractability based on explicit predicate complexity and implicit data-dependency complexity. During fuzzing, ExcavatorFuzz monitors line-level progress to detect blocked paths and invokes the LLM to synthesize or refine seeds for unsatisfied predicates using structured feedback. We evaluate ExcavatorFuzz on 30 real-world C/C++ benchmarks. ExcavatorFuzz triggers 29 out of 30 known vulnerabilities within 24 hours and achieves an average 4.34x speedup in time-to-exposure over seven state-of-the-art fuzzers. It also discovered three previously unknown vulnerabilities in open-source projects, two of which have been assigned CVE IDs.
+</details>
